@@ -1,0 +1,15 @@
+Dashboard
+    - Login
+        - Dashboard
+        - Artikel
+        - Sarana dan Prasarana
+        - Kelas
+            - Reguler
+            - PKL/PRAKERIN
+            - Profesi 1 Tahun
+        - Data Staff (user)
+        - Profil Lembaga
+            - Visi & Misi
+            - Akreditasi
+            - Profil Lembaga
+    - Logout
