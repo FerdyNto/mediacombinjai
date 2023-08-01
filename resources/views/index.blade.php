@@ -33,11 +33,11 @@
                 </button>
                 <div class="collapse navbar-collapse" id="navbarNav">
                     <ul class="navbar-nav ms-auto">
-                        <li class="nav-item">
+                        <li class="nav-item ms-md-3">
                             <a class="nav-link text-white fw-semibold active" aria-current="page"
                                 href="#">Beranda</a>
                         </li>
-                        <li class="nav-item dropdown">
+                        <li class="nav-item dropdown ms-md-3">
                             <a class="nav-link dropdown-toggle text-white fw-semibold" href="#" role="button"
                                 data-bs-toggle="dropdown" aria-expanded="false">
                                 Profil
@@ -47,10 +47,10 @@
                                 <li><a class="dropdown-item" href="#">Staff dan Instruktur</a></li>
                             </ul>
                         </li>
-                        <li class="nav-item">
+                        <li class="nav-item ms-md-3">
                             <a class="nav-link text-white fw-semibold" href="#">Artikel</a>
                         </li>
-                        <li class="nav-item dropdown">
+                        <li class="nav-item dropdown ms-md-3">
                             <a class="nav-link dropdown-toggle text-white fw-semibold" href="#" role="button"
                                 data-bs-toggle="dropdown" aria-expanded="false">
                                 Kelas
@@ -67,6 +67,30 @@
         </nav>
     </header>
     {{-- Akhir Header --}}
+
+    {{-- Hero --}}
+    <section id="hero">
+        <div class="container">
+            <div class="d-flex flex-column flex-lg-row mt-3 mt-lg-5 justify-content-lg-between align-items-lg-center">
+                {{-- bagian kiri --}}
+                <div class="left-side-hero">
+                    <p class="fw-semibold">Ayo Khursus!!!</p>
+                    <h1 class="fw-bold">The First and The Best</h1>
+                    <p>Ayo Tingkatkan Skill Sesuai Kebutuhan Dunia Kerja</p>
+                    <a href="#" class="btn fw-semibold">Cek Kelas</a>
+                </div>
+                {{-- /bagian kiri --}}
+
+                {{-- bagian kanan --}}
+                <div class="right-side-hero">
+                    <img src="{{ asset('img/img asset/Media Com Binjai.png') }}" alt="Media Com Binjai"
+                        class="img-fluid">
+                </div>
+                {{-- /bagian kanan --}}
+            </div>
+        </div>
+    </section>
+    {{-- Akhir Hero --}}
 
 
     <script src="{{ asset('js/bootstrap.bundle.min.js') }}"></script>
