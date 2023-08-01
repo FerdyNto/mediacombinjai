@@ -1,0 +1,10 @@
+body {
+    font-family: "Poppins", sans-serif;
+}
+.logo-mediacom-header {
+    width: 10rem;
+}
+
+header nav.navbar {
+    background-color: #1363df;
+}
