@@ -1,0 +1,87 @@
+:root {
+    --primary: #1363df;
+    --secondary: #06283d;
+    --background: #eaf4ff;
+    --text-dark: #767676;
+}
+body {
+    font-family: "Poppins", sans-serif;
+    background-color: var(--background);
+}
+.logo-mediacom-header {
+    width: 10rem;
+}
+
+header nav.navbar {
+    background-color: var(--primary);
+}
+
+.left-side-hero,
+.right-side-hero {
+    width: 100%;
+}
+
+.left-side-hero p.fw-semibold {
+    color: var(--primary);
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+.left-side-hero h1.fw-bold {
+    font-family: "Dancing Script", cursive;
+    font-size: 38px;
+    margin-bottom: 20px;
+}
+
+.left-side-hero a.fw-semibold {
+    background-color: var(--primary);
+    width: 100%;
+    color: white;
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+/* Tablet */
+@media screen and (min-width: 992px) {
+    .logo-mediacom-header {
+        width: 248px;
+    }
+    #hero .container .d-flex {
+        height: 400px;
+    }
+    .left-side-hero {
+        width: 536px;
+    }
+
+    .right-side-hero {
+        width: 632px;
+    }
+    .left-side-hero p.fw-semibold {
+        margin-bottom: 32px;
+        font-size: 32px;
+    }
+
+    .left-side-hero h1.fw-bold {
+        margin-bottom: 32px;
+        font-size: 60px;
+    }
+    .left-side-hero p {
+        font-size: 24px;
+        margin-bottom: 32px;
+    }
+
+    .left-side-hero a.fw-semibold {
+        font-size: 32px;
+        margin-bottom: 20px;
+        width: 402px;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    #hero .container .d-flex {
+        height: 685px;
+    }
+
+    ul.navbar-nav li.nav-item {
+        font-size: 18px;
+    }
+}
