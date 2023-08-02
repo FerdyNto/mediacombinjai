@@ -56,6 +56,17 @@ header nav.navbar {
     color: var(--text-dark);
 }
 
+/* Footer */
+footer#footer {
+    background-color: var(--secondary);
+    color: white;
+}
+
+.flex-column li.nav-item a.nav-link {
+    padding: 0;
+    color: white;
+}
+
 /* Ponsel Landscape */
 @media screen and (min-width: 768px) {
     /* Pelatihan */
