@@ -20,7 +20,7 @@
 
     {{-- Icon --}}
     <link rel="shortcut icon" href="{{ asset('img/img logo/LOGO MEDIACOM.ico') }}">
-    <title>Media Com</title>
+    <title>Media Com | {{ $title }}</title>
 </head>
 
 <body>
