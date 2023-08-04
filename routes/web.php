@@ -20,3 +20,11 @@ Route::get('/', function () {
 Route::get('/dashboard', function () {
     return view('dashboard.index');
 });
+
+Route::get('/dashboard/user', function () {
+    return view('dashboard.user.index');
+});
+
+Route::get('/dashboard/jabatan', function () {
+    return view('dashboard.jabatan.index');
+});
