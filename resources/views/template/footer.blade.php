@@ -49,7 +49,7 @@
 
                 <ul class="nav flex-column">
                     <li class="nav-item mb-3">
-                        <a class="nav-link"href="#">Tentang Media Com</a>
+                        <a class="nav-link"href="{{ route('tentang_mediacom') }}">Tentang Media Com</a>
                     </li>
                     <li class="nav-item mb-3">
                         <a class="nav-link" href="#">Staff dan Instruktur</a>

@@ -56,6 +56,19 @@ header nav.navbar {
     color: var(--text-dark);
 }
 
+/* Profil */
+.img-akreditas {
+    width: 100%;
+}
+.img-pimpinan {
+    width: 100%;
+}
+
+/* Visi & Misi */
+.visi,
+.misi {
+    text-align: center;
+}
 /* Footer */
 footer#footer {
     background-color: var(--secondary);
@@ -79,6 +92,17 @@ footer#footer {
     }
     .left-side-hero a.fw-semibold {
         width: 80%;
+    }
+
+    /* Profil */
+    .img-akreditas {
+        height: 135px;
+        width: fit-content;
+    }
+
+    /* header profil */
+    .row .col-12 h2.fw-semibold {
+        font-size: 32px;
     }
 }
 
@@ -124,6 +148,12 @@ footer#footer {
     .deskripsi-pelatihan {
         width: 60%;
     }
+
+    /* profil */
+
+    .img-pimpinan {
+        width: 367px;
+    }
 }
 
 /* Laptop */
@@ -154,9 +184,5 @@ footer#footer {
 
     .deskripsi-pelatihan h3.fw-bold {
         font-size: 32px;
-    }
-
-    .deskripsi-pelatihan div.fw-medium {
-        font-size: 24px;
     }
 }
