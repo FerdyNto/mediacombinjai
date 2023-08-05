@@ -52,7 +52,8 @@
                         <a class="nav-link"href="{{ route('tentang_mediacom') }}">Tentang Media Com</a>
                     </li>
                     <li class="nav-item mb-3">
-                        <a class="nav-link" href="#">Staff dan Instruktur</a>
+                        <a class="nav-link" href="{{ route('struktur_organisasi') }}">Struktur
+                            Organisasi</a>
                     </li>
                     <li class="nav-item mb-3">
                         <a class="nav-link" href="#">Artikel</a>

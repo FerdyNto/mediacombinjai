@@ -69,6 +69,14 @@ header nav.navbar {
 .misi {
     text-align: center;
 }
+
+/* struktur organisasi */
+.detail-struktur h4.fw-semibold {
+    color: var(--secondary);
+}
+.detail-struktur h5.fw-medium {
+    color: var(--text-dark);
+}
 /* Footer */
 footer#footer {
     background-color: var(--secondary);

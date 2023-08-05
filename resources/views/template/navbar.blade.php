@@ -21,7 +21,8 @@
                         <ul class="dropdown-menu dropdown-menu-end">
                             <li><a class="dropdown-item" href="{{ route('tentang_mediacom') }}">Tentang Media Com</a>
                             </li>
-                            <li><a class="dropdown-item" href="#">Staff dan Instruktur</a></li>
+                            <li><a class="dropdown-item" href="{{ route('struktur_organisasi') }}">Struktur
+                                    Organisasi</a></li>
                         </ul>
                     </li>
                     <li class="nav-item ms-md-3">

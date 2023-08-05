@@ -1,6 +1,6 @@
 @extends('template.main')
 @section('content-public')
-    <section id="profil-mediacom" class="py-3 py-lg-5">
+    <section id="profil-mediacom-tentang" class="py-3 py-lg-5">
         <div class="container">
             <h1 class="text-center fw-bold mb-3">Tentang Media Com Binjai</h1>
             <div class="row">
