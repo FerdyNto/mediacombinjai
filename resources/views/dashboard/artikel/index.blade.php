@@ -2,7 +2,7 @@
 @section('content')
 
 
-    <table class="table table-hover">
+    <table class="table table-hover table-bordered border-primary">
       <tr>
         <th>No</th>
         <th>Judul</th>
@@ -26,13 +26,13 @@
         <td>akreditas</td>
         <td>bisa</td>
         <td>merah</td>
-        <td>^_^</td>
+        <td><img src="artikel" alt="BOB.jpeg"></td>
         <td>submit</td>
         <td>19763354</td>
       </tr>
     </table>
  
-    
+
     </body>
     </html>
     
