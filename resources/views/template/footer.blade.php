@@ -63,7 +63,7 @@
         </div>
         <div class="row">
             <div class="col-12 my-3">
-                <h3 class="fw-semibold mb-4">Tautan</h3>
+                <h3 class="fw-semibold mb-4">Sosial Media</h3>
 
                 <div class="d-flex">
                     <div class="me-3 fs-4">
