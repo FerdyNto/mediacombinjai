@@ -1,6 +1,6 @@
 @extends('dashboard.layouts.main')
 @section('content')
-<table class="table table-hover">
+<table class="table table-hover table-bordered">
     <tr>
       <th>ID</th>
       <th>Nama Jabatan</th>

@@ -1,9 +1,10 @@
 @extends('dashboard.layouts.main')
 
 @section('content')
-<table class="table table-hover">
+<h1 style="center">Daftar User</h1>
+<table class="table table-hover table-bordered">
     <tr>
-      <th>No</th>
+      <th>ID</th>
       <th>Username</th>
       <th>Password</th>
       <th>Nama</th>
