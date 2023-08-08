@@ -30,12 +30,12 @@
             </tr>
             <tr>
               <td>1</td>
-              <td>Pemrograman</td>
+              <td>Instruktur Pemrograman</td>
               <td>Instruktur</td>
             </tr>
             <tr>
               <td>2</td>
-              <td>Hardware</td>
+              <td>Instruktur Hardware</td>
               <td>Instruktur</td>
             </tr>
           </table> 

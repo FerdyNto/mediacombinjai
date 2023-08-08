@@ -30,3 +30,4 @@ Route::get('/dashboard/jabatan', function () {
 });
 
 Route::get('jabatan', 'ControllerJabatan@Tampil');
+Route::get('user', 'ControllerUser@Tampil');
