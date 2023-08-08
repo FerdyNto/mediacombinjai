@@ -28,3 +28,5 @@ Route::get('/dashboard/user', function () {
 Route::get('/dashboard/jabatan', function () {
     return view('dashboard.jabatan.index');
 });
+
+Route::get('jabatan', 'ControllerJabatan@Tampil');
