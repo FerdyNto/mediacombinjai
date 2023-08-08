@@ -49,10 +49,11 @@
 
                 <ul class="nav flex-column">
                     <li class="nav-item mb-3">
-                        <a class="nav-link"href="#">Tentang Media Com</a>
+                        <a class="nav-link"href="{{ route('tentang_mediacom') }}">Tentang Media Com</a>
                     </li>
                     <li class="nav-item mb-3">
-                        <a class="nav-link" href="#">Staff dan Instruktur</a>
+                        <a class="nav-link" href="{{ route('struktur_organisasi') }}">Struktur
+                            Organisasi</a>
                     </li>
                     <li class="nav-item mb-3">
                         <a class="nav-link" href="#">Artikel</a>
@@ -62,7 +63,7 @@
         </div>
         <div class="row">
             <div class="col-12 my-3">
-                <h3 class="fw-semibold mb-4">Tautan</h3>
+                <h3 class="fw-semibold mb-4">Sosial Media</h3>
 
                 <div class="d-flex">
                     <div class="me-3 fs-4">

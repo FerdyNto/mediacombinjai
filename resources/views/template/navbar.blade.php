@@ -11,7 +11,7 @@
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item ms-md-3">
-                        <a class="nav-link text-white fw-semibold" aria-current="page" href="#">Beranda</a>
+                        <a class="nav-link text-white fw-semibold" aria-current="page" href="/">Beranda</a>
                     </li>
                     <li class="nav-item dropdown ms-md-3">
                         <a class="nav-link dropdown-toggle text-white fw-semibold" href="#" role="button"
@@ -19,8 +19,10 @@
                             Profil
                         </a>
                         <ul class="dropdown-menu dropdown-menu-end">
-                            <li><a class="dropdown-item" href="#">Tentang Media Com</a></li>
-                            <li><a class="dropdown-item" href="#">Staff dan Instruktur</a></li>
+                            <li><a class="dropdown-item" href="{{ route('tentang_mediacom') }}">Tentang Media Com</a>
+                            </li>
+                            <li><a class="dropdown-item" href="{{ route('struktur_organisasi') }}">Struktur
+                                    Organisasi</a></li>
                         </ul>
                     </li>
                     <li class="nav-item ms-md-3">
