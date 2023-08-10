@@ -34,7 +34,7 @@
                             Kelas
                         </a>
                         <ul class="dropdown-menu dropdown-menu-end">
-                            <li><a class="dropdown-item" href="#">Reguler</a></li>
+                            <li><a class="dropdown-item" href="{{ route('kelas_reguler') }}">Reguler</a></li>
                             <li><a class="dropdown-item" href="#">Profesi 1 Tahun</a></li>
                             <li><a class="dropdown-item" href="#">Prakerin / PKL</a></li>
                         </ul>
