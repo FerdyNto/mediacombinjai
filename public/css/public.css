@@ -88,6 +88,29 @@ footer#footer {
     color: white;
 }
 
+/* kelas reguler */
+#kelas-reguler .container .row .left-reguler p.fw-medium {
+    font-size: 20px;
+    color: var(--primary);
+    margin-bottom: 16px;
+}
+#kelas-reguler .container .row .left-reguler h1.fw-bold {
+    font-size: 40px;
+    margin-bottom: 16px;
+}
+#kelas-reguler .container .row .left-reguler p {
+    margin-bottom: 16px;
+    color: var(--text-dark);
+}
+
+#kelas-reguler .container .row .left-reguler a.btn {
+    background-color: var(--primary);
+    width: 100%;
+    color: white;
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
 /* Ponsel Landscape */
 @media screen and (min-width: 768px) {
     /* Pelatihan */
@@ -111,6 +134,11 @@ footer#footer {
     /* header profil */
     .row .col-12 h2.fw-semibold {
         font-size: 32px;
+    }
+
+    /* kelas reguler */
+    #kelas-reguler .container .row .left-reguler a.btn {
+        width: 80%;
     }
 }
 
@@ -192,5 +220,17 @@ footer#footer {
 
     .deskripsi-pelatihan h3.fw-bold {
         font-size: 32px;
+    }
+
+    /* Kelas Reguler */
+    #kelas-reguler .container .row .left-reguler p.fw-medium {
+        font-size: 24px;
+    }
+    #kelas-reguler .container .row .left-reguler h1.fw-bold {
+        font-size: 48px;
+    }
+    #kelas-reguler .container .row .left-reguler a.btn {
+        font-size: 24px;
+        width: 50%;
     }
 }
