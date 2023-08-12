@@ -29,7 +29,7 @@
     <section id="bidang-pelatihan" class="py-3 py-lg-5">
         <div class="container">
             <div class="text-center mb-5">
-                <h2>Paket Bidang Pelatihan</h2>
+                <h2 class="fw-medium">Paket Bidang Pelatihan</h2>
             </div>
 
             <div class="d-flex flex-wrap flex-column flex-md-row justify-content-md-between gap-4">
@@ -85,4 +85,47 @@
         </div>
     </section>
     {{-- akhir bidang pelatihan --}}
+
+    {{-- Sistem Pembayaran --}}
+    <section id="pembayaran" class="py-3 py-lg-5">
+        <div class="container">
+            <div class="text-center mb-3">
+                <h2 class="fw-medium">Sistem Pembayaran</h2>
+            </div>
+            <div class="table-responsive">
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th class="text-center">Uang Pendaftaran</th>
+                        </tr>
+                    </thead>
+                    <tr class="text-center">
+                        <td>Rp. 50.000</td>
+                    </tr>
+                    <tr>
+                        <td colspan="3">
+                            <table class="table mt-3 table-bordered">
+                                <thead>
+                                    <tr class="text-center">
+                                        <th>Angsuran 1</th>
+                                        <th>Angsuran 2</th>
+                                        <th>Angsuran 3</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr class="text-center">
+                                        <td>50% dari biaya pendidikan</td>
+                                        <td>25% dari biaya pendidikan</td>
+                                        <td>25% dari biaya pendidikan</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+
+        </div>
+    </section>
+    {{-- Akhir Sistem Pembayaran --}}
 @endsection
