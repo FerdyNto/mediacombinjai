@@ -116,6 +116,9 @@ footer#footer {
     font-size: 20px;
     margin-bottom: 20px;
 }
+.paket {
+    width: 100%;
+}
 
 .paket p {
     color: var(--text-dark);
@@ -156,6 +159,10 @@ footer#footer {
     /* kelas reguler */
     #kelas-reguler .container .row .left-reguler a.btn {
         width: 80%;
+    }
+
+    .paket {
+        width: 48%;
     }
 }
 

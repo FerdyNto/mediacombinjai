@@ -32,8 +32,8 @@
                 <h2>Paket Bidang Pelatihan</h2>
             </div>
 
-            <div class="d-flex flex-wrap flex-column flex-md-row justify-content-around gap-5">
-                <div class="col-12 col-md-5 paket bg-white p-2 rounded">
+            <div class="d-flex flex-wrap flex-column flex-md-row justify-content-md-between gap-4">
+                <div class="paket bg-white p-2 rounded">
                     <h3 class="fw-medium">Teknik Komputer (Hardware)</h3>
                     <p class="fw-medium">Biaya Pendidikan Rp. 950.000</p>
                     <p class="fw-medium">Durasi 2 Jam / Pertemuan</p>
@@ -41,7 +41,7 @@
                     <p class="fw-medium">Waktu Sesuai Kesepakatan Dengan Instruktur</p>
                     <a href="" class="btn fw-medium">Ajukan Pertanyaan / Daftar</a>
                 </div>
-                <div class="col-12 col-md-5 paket bg-white p-2 rounded">
+                <div class="paket bg-white p-2 rounded">
                     <h3 class="fw-medium">Teknik Komputer (Hardware)</h3>
                     <p class="fw-medium">Biaya Pendidikan Rp. 950.000</p>
                     <p class="fw-medium">Durasi 2 Jam / Pertemuan</p>
@@ -49,7 +49,7 @@
                     <p class="fw-medium">Waktu Sesuai Kesepakatan Dengan Instruktur</p>
                     <a href="" class="btn fw-medium">Ajukan Pertanyaan / Daftar</a>
                 </div>
-                <div class="col-12 col-md-5 paket bg-white p-2 rounded">
+                <div class="paket bg-white p-2 rounded">
                     <h3 class="fw-medium">Teknik Komputer (Hardware)</h3>
                     <p class="fw-medium">Biaya Pendidikan Rp. 950.000</p>
                     <p class="fw-medium">Durasi 2 Jam / Pertemuan</p>
@@ -57,7 +57,7 @@
                     <p class="fw-medium">Waktu Sesuai Kesepakatan Dengan Instruktur</p>
                     <a href="" class="btn fw-medium">Ajukan Pertanyaan / Daftar</a>
                 </div>
-                <div class="col-12 col-md-5 paket bg-white p-2 rounded">
+                <div class="paket bg-white p-2 rounded">
                     <h3 class="fw-medium">Teknik Komputer (Hardware)</h3>
                     <p class="fw-medium">Biaya Pendidikan Rp. 950.000</p>
                     <p class="fw-medium">Durasi 2 Jam / Pertemuan</p>
@@ -65,7 +65,7 @@
                     <p class="fw-medium">Waktu Sesuai Kesepakatan Dengan Instruktur</p>
                     <a href="" class="btn fw-medium">Ajukan Pertanyaan / Daftar</a>
                 </div>
-                <div class="col-12 col-md-5 paket bg-white p-2 rounded">
+                <div class="paket bg-white p-2 rounded">
                     <h3 class="fw-medium">Teknik Komputer (Hardware)</h3>
                     <p class="fw-medium">Biaya Pendidikan Rp. 950.000</p>
                     <p class="fw-medium">Durasi 2 Jam / Pertemuan</p>
@@ -73,7 +73,7 @@
                     <p class="fw-medium">Waktu Sesuai Kesepakatan Dengan Instruktur</p>
                     <a href="" class="btn fw-medium">Ajukan Pertanyaan / Daftar</a>
                 </div>
-                <div class="col-12 col-md-5 paket bg-white p-2 rounded">
+                <div class="paket bg-white p-2 rounded">
                     <h3 class="fw-medium">Teknik Komputer (Hardware)</h3>
                     <p class="fw-medium">Biaya Pendidikan Rp. 950.000</p>
                     <p class="fw-medium">Durasi 2 Jam / Pertemuan</p>
