@@ -21,6 +21,7 @@ Route::get('/tentang-mediacom', [ProfilController::class, 'tentangMediaCom'])->n
 Route::get('struktur-organisasi', [ProfilController::class, 'strukturOrganisasi'])->name('struktur_organisasi');
 Route::get('/kelas', [KelasController::class, 'index'])->name('kelas');
 Route::get('/reguler', [KelasController::class, 'reguler'])->name('kelas_reguler');
+Route::get('/profesi-satu-tahun', [KelasController::class, 'satuTahun'])->name('profesi_satu_tahun');
 
 Route::get('/dashboard', function () {
     return view('dashboard.index');

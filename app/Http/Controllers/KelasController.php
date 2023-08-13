@@ -19,4 +19,11 @@ class KelasController extends Controller
             'title' => 'Kelas Reguler/Privat'
         ]);
     }
+
+    public function satuTahun()
+    {
+        return view('kelas.satu_tahun', [
+            'title' => 'Profesi 1 Tahun'
+        ]);
+    }
 }

@@ -95,21 +95,21 @@ footer#footer {
 }
 
 /* kelas reguler */
-#kelas-reguler .container .row .left-reguler p.fw-medium {
+#hero-kelas .container .row .left p.fw-medium {
     font-size: 20px;
     color: var(--primary);
     margin-bottom: 16px;
 }
-#kelas-reguler .container .row .left-reguler h1.fw-bold {
+#hero-kelas .container .row .left h1.fw-bold {
     font-size: 40px;
     margin-bottom: 16px;
 }
-#kelas-reguler .container .row .left-reguler p {
+#hero-kelas .container .row .left p {
     margin-bottom: 16px;
     color: var(--text-dark);
 }
 
-#kelas-reguler .container .row .left-reguler a.btn {
+#hero-kelas .container .row .left a.btn {
     background-color: var(--primary);
     width: 100%;
     color: white;
@@ -131,6 +131,9 @@ footer#footer {
     color: white;
 }
 
+.card {
+    height: fit-content;
+}
 /* Ponsel Landscape */
 @media screen and (min-width: 768px) {
     /* Pelatihan */
@@ -157,7 +160,7 @@ footer#footer {
     }
 
     /* kelas reguler */
-    #kelas-reguler .container .row .left-reguler a.btn {
+    #hero-kelas .container .row .left a.btn {
         width: 80%;
     }
 
@@ -247,13 +250,13 @@ footer#footer {
     }
 
     /* Kelas Reguler */
-    #kelas-reguler .container .row .left-reguler p.fw-medium {
+    #hero-kelas .container .row .left p.fw-medium {
         font-size: 24px;
     }
-    #kelas-reguler .container .row .left-reguler h1.fw-bold {
+    #hero-kelas .container .row .left h1.fw-bold {
         font-size: 48px;
     }
-    #kelas-reguler .container .row .left-reguler a.btn {
+    #hero-kelas .container .row .left a.btn {
         font-size: 24px;
         width: 50%;
     }
