@@ -16,7 +16,7 @@ class KelasController extends Controller
     public function reguler()
     {
         return view('kelas.reguler', [
-            'title' => 'Kelas Reguler/Privat'
+            'title' => 'Reguler/Privat'
         ]);
     }
 
@@ -24,6 +24,13 @@ class KelasController extends Controller
     {
         return view('kelas.satu_tahun', [
             'title' => 'Profesi 1 Tahun'
+        ]);
+    }
+
+    public function prakerin()
+    {
+        return view('kelas.prakerin', [
+            'title' => 'PRAKERIN / PKL'
         ]);
     }
 }

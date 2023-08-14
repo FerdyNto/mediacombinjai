@@ -22,6 +22,7 @@ Route::get('struktur-organisasi', [ProfilController::class, 'strukturOrganisasi'
 Route::get('/kelas', [KelasController::class, 'index'])->name('kelas');
 Route::get('/reguler', [KelasController::class, 'reguler'])->name('kelas_reguler');
 Route::get('/profesi-satu-tahun', [KelasController::class, 'satuTahun'])->name('profesi_satu_tahun');
+Route::get('/prakerin-pkl', [KelasController::class, 'prakerin'])->name('prakerin_pkl');
 
 Route::get('/dashboard', function () {
     return view('dashboard.index');
