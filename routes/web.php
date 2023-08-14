@@ -19,10 +19,13 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', [HomeController::class, 'index']);
 Route::get('/tentang-mediacom', [ProfilController::class, 'tentangMediaCom'])->name('tentang_mediacom');
 Route::get('struktur-organisasi', [ProfilController::class, 'strukturOrganisasi'])->name('struktur_organisasi');
-Route::get('/kelas', [KelasController::class, 'index'])->name('kelas');
-Route::get('/reguler', [KelasController::class, 'reguler'])->name('kelas_reguler');
-Route::get('/profesi-satu-tahun', [KelasController::class, 'satuTahun'])->name('profesi_satu_tahun');
-Route::get('/prakerin-pkl', [KelasController::class, 'prakerin'])->name('prakerin_pkl');
+Route::prefix('kelas')->group(function () {
+    Route::get('/', [KelasController::class, 'index'])->name('kelas');
+    Route::get('/reguler', [KelasController::class, 'reguler'])->name('kelas_reguler');
+    Route::get('/profesi-satu-tahun', [KelasController::class, 'satuTahun'])->name('profesi_satu_tahun');
+    Route::get('/prakerin-pkl', [KelasController::class, 'prakerin'])->name('prakerin_pkl');
+});
+
 
 Route::get('/dashboard', function () {
     return view('dashboard.index');
