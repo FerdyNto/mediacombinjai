@@ -22,8 +22,4 @@ Route::get('/dashboard', function () {
     return view('dashboard.index');
 });
 
-Route::get('/dashboard/artikel', function () {
-    return view('dashboard.artikel.index');
-});
-
 Route::get('/dashboard/artikel', [DashboardArtikelController::class, 'index'])->name('dashboard_artikel');
