@@ -1,5 +1,5 @@
 <?php
-
+use App\Http\Controllers\DashboardArtikelController;
 use App\Http\Controllers\DashboardJabatanController;
 use App\Http\Controllers\DashboardUserController;
 use App\Http\Controllers\HomeController;
@@ -25,5 +25,6 @@ Route::get('/dashboard', function () {
     return view('dashboard.index');
 });
 
+Route::get('/dashboard/artikel', [DashboardArtikelController::class, 'index'])->name('dashboard_artikel');
 Route::get('/dashboard/jabatan', [DashboardJabatanController::class, 'index'])->name('dashboard_jabatan');
 Route::get('/dashboard/user', [DashboardUserController::class, 'index'])->name('dashboard_users');
