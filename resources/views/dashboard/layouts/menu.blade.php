@@ -35,10 +35,18 @@
                         </p>
                     </a>
                     <ul class="nav nav-treeview">
+                       
                         <li class="nav-item">
-                            <a href="" class="nav-link">
+                            <a href="{{ route ('dashboard_users') }}" class="nav-link">
                                 <i class="far fa-circle nav-icon"></i>
-                                <p>Artikel</p>
+                                <p>Users</p>
+                            </a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a href="{{ route ('dashboard_jabatan') }}" class="nav-link">
+                                <i class="far fa-circle nav-icon"></i>
+                                <p>Jabatan</p>
                             </a>
                         </li>
                     </ul>

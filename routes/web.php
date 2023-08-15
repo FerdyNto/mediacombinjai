@@ -1,8 +1,11 @@
 <?php
 
+use App\Http\Controllers\DashboardJabatanController;
+use App\Http\Controllers\DashboardUserController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\ProfilController;
 use Illuminate\Support\Facades\Route;
+use SebastianBergmann\CodeCoverage\Report\Html\Dashboard;
 
 /*
 |--------------------------------------------------------------------------
@@ -21,3 +24,6 @@ Route::get('struktur-organisasi', [ProfilController::class, 'strukturOrganisasi'
 Route::get('/dashboard', function () {
     return view('dashboard.index');
 });
+
+Route::get('/dashboard/jabatan', [DashboardJabatanController::class, 'index'])->name('dashboard_jabatan');
+Route::get('/dashboard/user', [DashboardUserController::class, 'index'])->name('dashboard_users');
