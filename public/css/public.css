@@ -2,7 +2,13 @@
     --primary: #1363df;
     --secondary: #06283d;
     --background: #eaf4ff;
-    --text-dark: #767676;
+    --text-dark: #4a4a4a;
+}
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
 }
 body {
     font-family: "Poppins", sans-serif;
@@ -88,6 +94,64 @@ footer#footer {
     color: white;
 }
 
+/* kelas reguler */
+#hero-kelas .container .row .left p.fw-medium {
+    font-size: 20px;
+    color: var(--primary);
+    margin-bottom: 16px;
+}
+#hero-kelas .container .row .left h1.fw-bold {
+    font-size: 40px;
+    margin-bottom: 16px;
+}
+#hero-kelas .container .row .left p {
+    margin-bottom: 16px;
+    color: var(--text-dark);
+}
+
+#hero-kelas .container .row .left a.btn {
+    background-color: var(--primary);
+    width: 100%;
+    color: white;
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+.paket {
+    width: 100%;
+}
+
+.paket p {
+    color: var(--text-dark);
+    margin-bottom: 5px;
+}
+
+.paket a.btn {
+    background-color: var(--primary);
+    width: 100%;
+    color: white;
+}
+
+.card {
+    height: fit-content;
+}
+
+.sing-jurusan {
+    font-size: 100px;
+    font-weight: bold;
+    text-shadow: 4px 4px 10px rgba(0, 0, 0, 0.25);
+    margin: 0;
+}
+
+.sing-jurusan ~ p {
+    font-size: 20px;
+}
+.materi-prakerin p {
+    font-size: 24px;
+}
+
+.jurusan {
+    margin-bottom: 50px;
+}
 /* Ponsel Landscape */
 @media screen and (min-width: 768px) {
     /* Pelatihan */
@@ -111,6 +175,15 @@ footer#footer {
     /* header profil */
     .row .col-12 h2.fw-semibold {
         font-size: 32px;
+    }
+
+    /* kelas reguler */
+    #hero-kelas .container .row .left a.btn {
+        width: 80%;
+    }
+
+    .paket {
+        width: 48%;
     }
 }
 
@@ -162,6 +235,10 @@ footer#footer {
     .img-pimpinan {
         width: 367px;
     }
+
+    .jurusan {
+        margin-bottom: 180px;
+    }
 }
 
 /* Laptop */
@@ -192,5 +269,17 @@ footer#footer {
 
     .deskripsi-pelatihan h3.fw-bold {
         font-size: 32px;
+    }
+
+    /* Kelas Reguler */
+    #hero-kelas .container .row .left p.fw-medium {
+        font-size: 24px;
+    }
+    #hero-kelas .container .row .left h1.fw-bold {
+        font-size: 48px;
+    }
+    #hero-kelas .container .row .left a.btn {
+        font-size: 24px;
+        width: 50%;
     }
 }

@@ -3,6 +3,7 @@ use App\Http\Controllers\DashboardArtikelController;
 use App\Http\Controllers\DashboardJabatanController;
 use App\Http\Controllers\DashboardUserController;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\KelasController;
 use App\Http\Controllers\ProfilController;
 use Illuminate\Support\Facades\Route;
 use SebastianBergmann\CodeCoverage\Report\Html\Dashboard;
@@ -21,6 +22,14 @@ use SebastianBergmann\CodeCoverage\Report\Html\Dashboard;
 Route::get('/', [HomeController::class, 'index']);
 Route::get('/tentang-mediacom', [ProfilController::class, 'tentangMediaCom'])->name('tentang_mediacom');
 Route::get('struktur-organisasi', [ProfilController::class, 'strukturOrganisasi'])->name('struktur_organisasi');
+Route::prefix('kelas')->group(function () {
+    Route::get('/', [KelasController::class, 'index'])->name('kelas');
+    Route::get('/reguler', [KelasController::class, 'reguler'])->name('kelas_reguler');
+    Route::get('/profesi-satu-tahun', [KelasController::class, 'satuTahun'])->name('profesi_satu_tahun');
+    Route::get('/prakerin-pkl', [KelasController::class, 'prakerin'])->name('prakerin_pkl');
+});
+
+
 Route::get('/dashboard', function () {
     return view('dashboard.index');
 });

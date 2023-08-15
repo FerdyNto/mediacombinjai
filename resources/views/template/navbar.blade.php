@@ -34,9 +34,10 @@
                             Kelas
                         </a>
                         <ul class="dropdown-menu dropdown-menu-end">
-                            <li><a class="dropdown-item" href="#">Reguler</a></li>
-                            <li><a class="dropdown-item" href="#">Profesi 1 Tahun</a></li>
-                            <li><a class="dropdown-item" href="#">Prakerin / PKL</a></li>
+                            <li><a class="dropdown-item" href="{{ route('kelas_reguler') }}">Reguler</a></li>
+                            <li><a class="dropdown-item" href="{{ route('profesi_satu_tahun') }}">Profesi 1 Tahun</a>
+                            </li>
+                            <li><a class="dropdown-item" href="{{ route('prakerin_pkl') }}">Prakerin / PKL</a></li>
                         </ul>
                     </li>
                 </ul>

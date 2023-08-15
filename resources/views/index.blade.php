@@ -9,7 +9,7 @@
                     <p class="fw-semibold">Ayo Khursus!!!</p>
                     <h1 class="fw-bold">The First and The Best</h1>
                     <p>Ayo Tingkatkan Skill Sesuai Kebutuhan Dunia Kerja</p>
-                    <a href="#" class="btn fw-semibold">Cek Kelas</a>
+                    <a href="{{ route('kelas') }}" class="btn fw-semibold">Cek Kelas</a>
                 </div>
                 {{-- /bagian kiri --}}
 

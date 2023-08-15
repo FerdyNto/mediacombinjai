@@ -34,13 +34,13 @@
 
                 <ul class="nav flex-column">
                     <li class="nav-item mb-3">
-                        <a class="nav-link"href="#">Reguler</a>
+                        <a class="nav-link"href="{{ route('kelas_reguler') }}">Reguler</a>
                     </li>
                     <li class="nav-item mb-3">
-                        <a class="nav-link" href="#">Profesi 1 Tahun</a>
+                        <a class="nav-link" href="{{ route('profesi_satu_tahun') }}">Profesi 1 Tahun</a>
                     </li>
                     <li class="nav-item mb-3">
-                        <a class="nav-link" href="#">Paket PKL (PRAKERIN)</a>
+                        <a class="nav-link" href="{{ route('prakerin_pkl') }}">Paket PKL (PRAKERIN)</a>
                     </li>
                 </ul>
             </div>
