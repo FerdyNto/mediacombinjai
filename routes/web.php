@@ -1,6 +1,8 @@
 <?php
 
+use App\Http\Controllers\DashboardJabatanController;
 use Illuminate\Support\Facades\Route;
+use SebastianBergmann\CodeCoverage\Report\Html\Dashboard;
 
 /*
 |--------------------------------------------------------------------------
@@ -29,5 +31,5 @@ Route::get('/dashboard/jabatan', function () {
     return view('dashboard.jabatan.index');
 });
 
-Route::get('jabatan', 'ControllerJabatan@Tampil');
-Route::get('user', 'ControllerUser@Tampil');
+Route::get('/dashboard/jabatan', [DashboardJabatanController::class, 'index'])->name('/dashboard/jabatan');
+Route::get('/dashboard/user', [DashboardUserController::class, 'index'])->name('/dashboard/user');

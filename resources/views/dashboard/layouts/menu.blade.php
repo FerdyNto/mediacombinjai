@@ -37,14 +37,14 @@
                     <ul class="nav nav-treeview">
                        
                         <li class="nav-item">
-                            <a href="/dashboard/user" class="nav-link">
+                            <a href="/dashboard/user/" class="nav-link">
                                 <i class="far fa-circle nav-icon"></i>
                                 <p>User</p>
                             </a>
                         </li>
 
                         <li class="nav-item">
-                            <a href="/dashboard/jabatan" class="nav-link">
+                            <a href="/dashboard/jabatan/" class="nav-link">
                                 <i class="far fa-circle nav-icon"></i>
                                 <p>Jabatan</p>
                             </a>
