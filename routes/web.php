@@ -2,6 +2,8 @@
 
 use App\Http\Controllers\DashboardJabatanController;
 use App\Http\Controllers\DashboardUserController;
+use App\Http\Controllers\HomeController;
+use App\Http\Controllers\ProfilController;
 use Illuminate\Support\Facades\Route;
 use SebastianBergmann\CodeCoverage\Report\Html\Dashboard;
 
@@ -16,10 +18,9 @@ use SebastianBergmann\CodeCoverage\Report\Html\Dashboard;
 |
 */
 
-Route::get('/', function () {
-    return view('index');
-});
-
+Route::get('/', [HomeController::class, 'index']);
+Route::get('/tentang-mediacom', [ProfilController::class, 'tentangMediaCom'])->name('tentang_mediacom');
+Route::get('struktur-organisasi', [ProfilController::class, 'strukturOrganisasi'])->name('struktur_organisasi');
 Route::get('/dashboard', function () {
     return view('dashboard.index');
 });
