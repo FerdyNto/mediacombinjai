@@ -1,6 +1,7 @@
 <?php
-
+use App\Http\Controllers\DashboardArtikelController;
 use Illuminate\Support\Facades\Route;
+use SebastianBergmann\CodeCoverage\Report\Html\Dashboard;
 
 /*
 |--------------------------------------------------------------------------
@@ -24,3 +25,5 @@ Route::get('/dashboard', function () {
 Route::get('/dashboard/artikel', function () {
     return view('dashboard.artikel.index');
 });
+
+Route::get('/dashboard/artikel', [DashboardArtikelController::class, 'index'])->name('dashboard_artikel');
