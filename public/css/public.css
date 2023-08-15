@@ -40,6 +40,80 @@ header nav.navbar {
     font-size: 20px;
     margin-bottom: 20px;
 }
+
+/* Pelatihan */
+.header-pelatihan p.fw-semibold {
+    color: var(--primary);
+}
+
+.img-pelatihan {
+    width: 100%;
+    aspect-ratio: 1/1;
+    object-fit: cover;
+}
+
+.deskripsi-pelatihan div.fw-medium {
+    color: var(--text-dark);
+}
+
+/* Profil */
+.img-akreditas {
+    width: 100%;
+}
+.img-pimpinan {
+    width: 100%;
+}
+
+/* Visi & Misi */
+.visi,
+.misi {
+    text-align: center;
+}
+
+/* struktur organisasi */
+.detail-struktur h4.fw-semibold {
+    color: var(--secondary);
+}
+.detail-struktur h5.fw-medium {
+    color: var(--text-dark);
+}
+/* Footer */
+footer#footer {
+    background-color: var(--secondary);
+    color: white;
+}
+
+.flex-column li.nav-item a.nav-link {
+    padding: 0;
+    color: white;
+}
+
+/* Ponsel Landscape */
+@media screen and (min-width: 768px) {
+    /* Pelatihan */
+    .header-pelatihan-item {
+        width: 40%;
+    }
+
+    .deskripsi-pelatihan {
+        width: 50%;
+    }
+    .left-side-hero a.fw-semibold {
+        width: 80%;
+    }
+
+    /* Profil */
+    .img-akreditas {
+        height: 135px;
+        width: fit-content;
+    }
+
+    /* header profil */
+    .row .col-12 h2.fw-semibold {
+        font-size: 32px;
+    }
+}
+
 /* Tablet */
 @media screen and (min-width: 992px) {
     .logo-mediacom-header {
@@ -72,10 +146,25 @@ header nav.navbar {
     .left-side-hero a.fw-semibold {
         font-size: 32px;
         margin-bottom: 20px;
-        width: 402px;
+    }
+
+    /* Pelatihan */
+    .header-pelatihan-item {
+        width: 30%;
+    }
+
+    .deskripsi-pelatihan {
+        width: 60%;
+    }
+
+    /* profil */
+
+    .img-pimpinan {
+        width: 367px;
     }
 }
 
+/* Laptop */
 @media screen and (min-width: 1200px) {
     #hero .container .d-flex {
         height: 685px;
@@ -83,5 +172,25 @@ header nav.navbar {
 
     ul.navbar-nav li.nav-item {
         font-size: 18px;
+    }
+
+    /* Pelatihan */
+
+    .header-pelatihan h2.fw-semibold {
+        font-size: 48px;
+    }
+    .header-pelatihan p.fw-semibold {
+        font-size: 32px;
+    }
+    .header-pelatihan-item {
+        width: 440px;
+    }
+
+    .deskripsi-pelatihan {
+        width: 576px;
+    }
+
+    .deskripsi-pelatihan h3.fw-bold {
+        font-size: 32px;
     }
 }
