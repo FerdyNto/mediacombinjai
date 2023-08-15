@@ -24,13 +24,5 @@ Route::get('/dashboard', function () {
     return view('dashboard.index');
 });
 
-Route::get('/dashboard/user', function () {
-    return view('dashboard.user.index');
-});
-
-Route::get('/dashboard/jabatan', function () {
-    return view('dashboard.jabatan.index');
-});
-
 Route::get('/dashboard/jabatan', [DashboardJabatanController::class, 'index'])->name('dashboard_jabatan');
 Route::get('/dashboard/user', [DashboardUserController::class, 'index'])->name('dashboard_users');
