@@ -31,11 +31,13 @@
 <body class="hold-transition sidebar-mini">
     <div class="wrapper">
         <!-- Navbar -->
-        @include('dashboard.layouts.navbar')
+        {{-- @include('dashboard.layouts.navbar') --}}
+        <x-dashboard.navbar />
         <!-- /.navbar -->
 
         <!-- Main Sidebar Container -->
-        @include('dashboard.layouts.menu')
+        {{-- @include('dashboard.layouts.menu') --}}
+        <x-dashboard.menu />
 
         <!-- Content Wrapper. Contains page content -->
         <div class="content-wrapper">
@@ -44,28 +46,24 @@
         <!-- /.content-wrapper -->
 
         <!-- Control Sidebar -->
-        <aside class="control-sidebar control-sidebar-dark">
-            <!-- Control sidebar content goes here -->
-        </aside>
+        {{-- <aside class="control-sidebar control-sidebar-dark"> --}}
+        <!-- Control sidebar content goes here -->
+        {{-- </aside> --}}
         <!-- /.control-sidebar -->
 
         <!-- Main Footer -->
-        <footer class="main-footer">
-            <strong>Copyright &copy; 2014-2021 <a href="https://adminlte.io">AdminLTE.io</a>.</strong>
-            All rights reserved.
-            <div class="float-right d-none d-sm-inline-block">
-                <b>Version</b> 3.2.0
-            </div>
-        </footer>
+        <x-dashboard.footer />
     </div>
     <!-- ./wrapper -->
 
     <!-- REQUIRED SCRIPTS -->
 
     <!-- jQuery -->
-    <script src="{{ asset('/') }}plugins/jquery/jquery.min.js"></script>
+    {{-- <script src="{{ asset('/') }}plugins/jquery/jquery.min.js"></script> --}}
+    <script src="https://code.jquery.com/jquery-3.7.0.slim.js"
+        integrity="sha256-7GO+jepT9gJe9LB4XFf8snVOjX3iYNb0FHYr5LI1N5c=" crossorigin="anonymous"></script>
     <!-- Bootstrap -->
-    <script src="{{ asset('/') }}plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="{{ asset('/') }}js/bootstrap.bundle.min.js"></script>
     <!-- AdminLTE -->
     <script src="{{ asset('/') }}dist/js/adminlte.js"></script>
 
