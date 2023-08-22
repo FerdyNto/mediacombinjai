@@ -26,55 +26,32 @@
                 data-accordion="false">
                 <!-- Add icons to the links using the .nav-icon class
        with font-awesome or any other icon font library -->
-                <li class="nav-item menu-open">
-                    <a href="#" class="nav-link active">
-                        <i class="nav-icon fas fa-tachometer-alt"></i>
-                        <p>
-                            Dashboard
-                            <i class="right fas fa-angle-left"></i>
-                        </p>
+                <li class="nav-item">
+                    <a href="{{ route('dashboard') }}" class="nav-link">
+                        <i class="fa-solid fa-gauge-high nav-icon"></i>
+                        <p> Dashboard</p>
                     </a>
-                    <ul class="nav nav-treeview">
-                        <li class="nav-item">
-                            <a href="{{ route('dashboard_users') }}" class="nav-link">
-                                <i class="far fa-circle nav-icon"></i>
-                                <p>Users</p>
-                            </a>
-                        </li>
-
-                        <li class="nav-item">
-                            <a href="{{ route('dashboard_jabatan') }}" class="nav-link">
-                                <i class="far fa-circle nav-icon"></i>
-                                <p>Jabatan</p>
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="{{ route('dashboard_artikel') }}" class="nav-link">
-                                <i class="far fa-circle nav-icon"></i>
-                                <p>Artikel</p>
-                            </a>
-                        </li>
-                    </ul>
                 </li>
-
+                <li class="nav-item">
+                    <a href="{{ route('dashboard_users') }}" class="nav-link active">
+                        <i class="fa-solid fa-users nav-icon"></i>
+                        <p> Users</p>
+                    </a>
+                </li>
 
                 <li class="nav-item">
-                    <a href="#" class="nav-link">
-                        <i class="nav-icon fas fa-edit"></i>
-                        <p>
-                            Forms
-                            <i class="fas fa-angle-left right"></i>
-                        </p>
+                    <a href="{{ route('dashboard_jabatan') }}" class="nav-link">
+                        <i class="fa-solid fa-user-plus nav-icon"></i>
+                        <p> Jabatan</p>
                     </a>
-                    <ul class="nav nav-treeview">
-                        <li class="nav-item">
-                            <a href="pages/forms/general.html" class="nav-link">
-                                <i class="far fa-circle nav-icon"></i>
-                                <p>Tambah Artikel</p>
-                            </a>
-                        </li>
-                    </ul>
                 </li>
+                <li class="nav-item">
+                    <a href="{{ route('dashboard_artikel') }}" class="nav-link">
+                        <i class="fa-solid fa-newspaper nav-icon"></i>
+                        <p> Artikel</p>
+                    </a>
+                </li>
+
             </ul>
         </nav>
         <!-- /.sidebar-menu -->
