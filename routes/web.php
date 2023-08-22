@@ -1,6 +1,8 @@
 <?php
+
 use App\Http\Controllers\DashboardArtikelController;
 use App\Http\Controllers\DashboardJabatanController;
+use App\Http\Controllers\DashboardMediaCom;
 use App\Http\Controllers\DashboardUserController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\KelasController;
@@ -30,9 +32,7 @@ Route::prefix('kelas')->group(function () {
 });
 
 
-Route::get('/dashboard', function () {
-    return view('dashboard.index');
-});
+Route::get('/dashboard', [DashboardMediaCom::class, 'index'])->name('dashboard');
 
 Route::get('/dashboard/artikel', [DashboardArtikelController::class, 'index'])->name('dashboard_artikel');
 Route::get('/dashboard/jabatan', [DashboardJabatanController::class, 'index'])->name('dashboard_jabatan');

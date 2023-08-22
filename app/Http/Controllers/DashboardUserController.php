@@ -9,7 +9,7 @@ class DashboardUserController extends Controller
     public function index()
     {
         return view('dashboard.user.index', [
-            'tittle' => 'user'
+            'title' => 'Dashboard User'
         ]);
     }
 }

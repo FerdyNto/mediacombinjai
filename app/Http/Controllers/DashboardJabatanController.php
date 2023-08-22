@@ -9,7 +9,7 @@ class DashboardJabatanController extends Controller
     public function index()
     {
         return view('dashboard.jabatan.index', [
-            'tittle' => 'jabatan'
+            'title' => 'Dashboard Jabatan'
         ]);
     }
 }
