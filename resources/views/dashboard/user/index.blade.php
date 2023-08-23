@@ -22,35 +22,38 @@
     <!-- Main content -->
     <div class="content">
         <div class="container-fluid">
-          <table class="table table-hover table-bordered">
-            <tr>
-              <th>ID</th>
-              <th>Username</th>
-              <th>Password</th>
-              <th>Nama</th>
-              <th>ID Jabatan</th>
-              <th>Status</th>
-              <th>Foto</th>
-            </tr>
-            <tr>
-              <td>1</td>
-              <td>Maria Anders</td>
-              <td>******</td>
-              <td>Butet Sinembah</td>
-              <td>0111001100</td>
-              <td>Aktif</td>
-              <td>T_T</td>
-            </tr>
-            <tr>
-              <td>2</td>
-              <td>Francisco Chang</td>
-              <td>******</td>
-              <td>Simbah Afrika</td>
-              <td>0111010010</td>
-              <td>Aktif</td>
-              <td>^_^</td>
-            </tr>
-          </table> 
+            <table class="table table-hover table-bordered">
+                <thead>
+                    <tr>
+                        {{-- <th>No</th> --}}
+                        <th>Foto</th>
+                        <th>Nama</th>
+                        <th>Username</th>
+                        <th>Jabatan</th>
+                        <th>Status</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @php
+                        $no = 1;
+                    @endphp
+                    @foreach ($data as $item)
+                        <tr>
+                            {{-- <td>{{ $no++ }}</td> --}}
+                            <td>
+                                <img src="{{ asset('img/profil') . '/' . $item->foto }}" alt="{{ $item->nama }}"
+                                    class="img-thumbnail" width="100px">
+                            </td>
+                            <td>{{ $item->nama }}</td>
+                            <td>{{ $item->username }}</td>
+                            <td>{{ $item->jabatan }}</td>
+                            <td>{{ $item->status }}</td>
+                        </tr>
+                    @endforeach
+
+                </tbody>
+            </table>
+            {{ $data->links() }}
         </div>
         <!-- /.container-fluid -->
     </div>

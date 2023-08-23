@@ -33,7 +33,8 @@
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a href="{{ route('dashboard_users') }}" class="nav-link active">
+                    <a href="{{ route('dashboard_users') }}"
+                        class="nav-link {{ request()->is('dashboard/user') ? 'active' : '' }}">
                         <i class="fa-solid fa-users nav-icon"></i>
                         <p> Users</p>
                     </a>
