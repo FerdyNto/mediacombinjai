@@ -25,13 +25,13 @@
 
 <body>
     {{-- Header --}}
-    @include('template.navbar')
+    <x-public.navbar />
     {{-- Akhir Header --}}
 
     @yield('content-public')
 
     {{-- Footer --}}
-    @include('template.footer')
+    <x-public.footer />
     {{-- Akhir Footer --}}
 
 
