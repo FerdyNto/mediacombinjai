@@ -9,4 +9,9 @@
         </li>
     </ul>
 
+    <form action="{{ route('logout') }}" method="POST" class="d-inline ms-auto">
+        @csrf
+        <button class="btn btn-danger" type="submit">Keluar</button>
+    </form>
+
 </nav>

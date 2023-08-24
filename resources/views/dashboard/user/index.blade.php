@@ -48,7 +48,6 @@
                                     <img src="{{ asset('img/profil') . '/' . $item->foto }}" alt="{{ $item->nama }}"
                                         class="img-thumbnail" width="100px">
                                 @endif
-
                             </td>
                             <td>{{ $item->nama }}</td>
                             <td>{{ $item->username }}</td>
@@ -56,7 +55,6 @@
                             <td>{{ $item->status }}</td>
                         </tr>
                     @endforeach
-
                 </tbody>
             </table>
             {{-- {{ $data->links() }} --}}
