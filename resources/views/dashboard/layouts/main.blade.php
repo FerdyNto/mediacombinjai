@@ -44,6 +44,7 @@
 
         <!-- Content Wrapper. Contains page content -->
         <div class="content-wrapper">
+            @include('components.pesan')
             @yield('content')
         </div>
         <!-- /.content-wrapper -->

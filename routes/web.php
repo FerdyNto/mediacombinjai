@@ -22,23 +22,29 @@ use SebastianBergmann\CodeCoverage\Report\Html\Dashboard;
 |
 */
 
-Route::get('/', [HomeController::class, 'index']);
-Route::get('/tentang-mediacom', [ProfilController::class, 'tentangMediaCom'])->name('tentang_mediacom');
-Route::get('struktur-organisasi', [ProfilController::class, 'strukturOrganisasi'])->name('struktur_organisasi');
-Route::prefix('kelas')->group(function () {
-    Route::get('/', [KelasController::class, 'index'])->name('kelas');
-    Route::get('/reguler', [KelasController::class, 'reguler'])->name('kelas_reguler');
-    Route::get('/profesi-satu-tahun', [KelasController::class, 'satuTahun'])->name('profesi_satu_tahun');
-    Route::get('/prakerin-pkl', [KelasController::class, 'prakerin'])->name('prakerin_pkl');
+Route::middleware(['middleware' => 'guest'])->group(function () {
+    Route::get('/', [HomeController::class, 'index']);
+    Route::get('/tentang-mediacom', [ProfilController::class, 'tentangMediaCom'])->name('tentang_mediacom');
+    Route::get('struktur-organisasi', [ProfilController::class, 'strukturOrganisasi'])->name('struktur_organisasi');
+    Route::prefix('kelas')->group(function () {
+        Route::get('/', [KelasController::class, 'index'])->name('kelas');
+        Route::get('/reguler', [KelasController::class, 'reguler'])->name('kelas_reguler');
+        Route::get('/profesi-satu-tahun', [KelasController::class, 'satuTahun'])->name('profesi_satu_tahun');
+        Route::get('/prakerin-pkl', [KelasController::class, 'prakerin'])->name('prakerin_pkl');
+    });
+    // Login
+    Route::get('/login', [AuthController::class, 'login'])->name('login');
+    Route::post('/login', [AuthController::class, 'prosesLogin'])->name('login.proses');
 });
 
-// Login
-Route::get('/login', [AuthController::class, 'login'])->name('login');
-Route::post('/login', [AuthController::class, 'prosesLogin'])->name('login.proses');
-Route::get('/register', [AuthController::class, 'register'])->name('register');
+Route::middleware(['middleware' => 'auth'])->group(function () {
+    // Registrasi
+    Route::get('/register', [AuthController::class, 'register'])->name('register');
+    Route::post('logout', [AuthController::class, 'logout'])->name('logout');
 
-Route::get('/dashboard', [DashboardMediaCom::class, 'index'])->name('dashboard');
+    Route::get('/dashboard', [DashboardMediaCom::class, 'index'])->name('dashboard');
 
-Route::get('/dashboard/artikel', [DashboardArtikelController::class, 'index'])->name('dashboard_artikel');
-Route::get('/dashboard/jabatan', [DashboardJabatanController::class, 'index'])->name('dashboard_jabatan');
-Route::get('/dashboard/user', [DashboardUserController::class, 'index'])->name('dashboard_users');
+    Route::get('/dashboard/artikel', [DashboardArtikelController::class, 'index'])->name('dashboard_artikel');
+    Route::get('/dashboard/jabatan', [DashboardJabatanController::class, 'index'])->name('dashboard_jabatan');
+    Route::get('/dashboard/user', [DashboardUserController::class, 'index'])->name('dashboard_users');
+});
