@@ -15,11 +15,10 @@
     <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
     <!-- Theme style -->
     <link rel="stylesheet" href="{{ asset('/') }}dist/css/adminlte.min.css">
-
     {{-- Data Table --}}
     <link rel="stylesheet" href="https://cdn.datatables.net/1.13.6/css/jquery.dataTables.css" />
-
-
+    {{-- Bootstrap --}}
+    <link rel="stylesheet" href="{{ asset('/') }}css/bootstrap.min.css">
 </head>
 <!--
 `body` tag options:

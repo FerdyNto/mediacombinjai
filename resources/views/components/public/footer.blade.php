@@ -34,13 +34,13 @@
 
                 <ul class="nav flex-column">
                     <li class="nav-item mb-3">
-                        <a class="nav-link"href="{{ route('kelas_reguler') }}">Reguler</a>
+                        <a class="nav-link"href="{{ route('kelas.reguler') }}">Reguler</a>
                     </li>
                     <li class="nav-item mb-3">
-                        <a class="nav-link" href="{{ route('profesi_satu_tahun') }}">Profesi 1 Tahun</a>
+                        <a class="nav-link" href="{{ route('profesi.satu.tahun') }}">Profesi 1 Tahun</a>
                     </li>
                     <li class="nav-item mb-3">
-                        <a class="nav-link" href="{{ route('prakerin_pkl') }}">Paket PKL (PRAKERIN)</a>
+                        <a class="nav-link" href="{{ route('prakerin.pkl') }}">Paket PKL (PRAKERIN)</a>
                     </li>
                 </ul>
             </div>
@@ -49,10 +49,10 @@
 
                 <ul class="nav flex-column">
                     <li class="nav-item mb-3">
-                        <a class="nav-link"href="{{ route('tentang_mediacom') }}">Tentang Media Com</a>
+                        <a class="nav-link"href="{{ route('tentang.mediacom') }}">Tentang Media Com</a>
                     </li>
                     <li class="nav-item mb-3">
-                        <a class="nav-link" href="{{ route('struktur_organisasi') }}">Struktur
+                        <a class="nav-link" href="{{ route('struktur.organisasi') }}">Struktur
                             Organisasi</a>
                     </li>
                     <li class="nav-item mb-3">

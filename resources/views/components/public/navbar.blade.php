@@ -19,9 +19,9 @@
                             Profil
                         </a>
                         <ul class="dropdown-menu dropdown-menu-end">
-                            <li><a class="dropdown-item" href="{{ route('tentang_mediacom') }}">Tentang Media Com</a>
+                            <li><a class="dropdown-item" href="{{ route('tentang.mediacom') }}">Tentang Media Com</a>
                             </li>
-                            <li><a class="dropdown-item" href="{{ route('struktur_organisasi') }}">Struktur
+                            <li><a class="dropdown-item" href="{{ route('struktur.organisasi') }}">Struktur
                                     Organisasi</a></li>
                         </ul>
                     </li>
@@ -34,10 +34,10 @@
                             Kelas
                         </a>
                         <ul class="dropdown-menu dropdown-menu-end">
-                            <li><a class="dropdown-item" href="{{ route('kelas_reguler') }}">Reguler</a></li>
-                            <li><a class="dropdown-item" href="{{ route('profesi_satu_tahun') }}">Profesi 1 Tahun</a>
+                            <li><a class="dropdown-item" href="{{ route('kelas.reguler') }}">Reguler</a></li>
+                            <li><a class="dropdown-item" href="{{ route('profesi.satu.tahun') }}">Profesi 1 Tahun</a>
                             </li>
-                            <li><a class="dropdown-item" href="{{ route('prakerin_pkl') }}">Prakerin / PKL</a></li>
+                            <li><a class="dropdown-item" href="{{ route('prakerin.pkl') }}">Prakerin / PKL</a></li>
                         </ul>
                     </li>
                 </ul>
