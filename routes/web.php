@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\AuthController;
 use App\Http\Controllers\DashboardArtikelController;
 use App\Http\Controllers\DashboardJabatanController;
 use App\Http\Controllers\DashboardMediaCom;
@@ -31,6 +32,9 @@ Route::prefix('kelas')->group(function () {
     Route::get('/prakerin-pkl', [KelasController::class, 'prakerin'])->name('prakerin_pkl');
 });
 
+// Login
+Route::get('/login', [AuthController::class, 'login'])->name('login');
+Route::get('/register', [AuthController::class, 'register'])->name('register');
 
 Route::get('/dashboard', [DashboardMediaCom::class, 'index'])->name('dashboard');
 
