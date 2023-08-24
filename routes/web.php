@@ -34,6 +34,7 @@ Route::prefix('kelas')->group(function () {
 
 // Login
 Route::get('/login', [AuthController::class, 'login'])->name('login');
+Route::post('/login', [AuthController::class, 'prosesLogin'])->name('login.proses');
 Route::get('/register', [AuthController::class, 'register'])->name('register');
 
 Route::get('/dashboard', [DashboardMediaCom::class, 'index'])->name('dashboard');

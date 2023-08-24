@@ -4,7 +4,9 @@
         <div class="d-flex align-items-center justify-content-center flex-md-column mx-auto"
             style="height: 100vh; width:500px">
             <img src="{{ asset('/') . 'img/img logo/LOGO MEDIACOM.png' }}" alt="Logo Media Com" width="250px" class="mb-5">
-            <form action="" class="col-12 border border-secondary-subtle bg-white p-3">
+            <form action="{{ route('login.proses') }}" class="col-12 border border-secondary-subtle bg-white p-3"
+                method="POST">
+                @csrf
                 <div class="mb-3">
                     <label for="username" class="form-label">Username</label>
                     <input type="text" id="username" name="username" class="form-control">

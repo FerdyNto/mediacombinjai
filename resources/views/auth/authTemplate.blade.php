@@ -21,6 +21,7 @@
 </head>
 
 <body>
+    @include('components.pesan')
     @yield('auth')
 
 
