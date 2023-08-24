@@ -11,8 +11,8 @@ class DashboardUserController extends Controller
     {
         return view('dashboard.user.index', [
             'title' => 'Dashboard User',
-            // 'data' => User::all() -> Tampil Semua Data
-            'data' => User::paginate(5)
+            'data' => User::all()
+            // 'data' => User::paginate(5)
         ]);
     }
 }

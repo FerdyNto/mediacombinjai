@@ -22,7 +22,7 @@
     <!-- Main content -->
     <div class="content">
         <div class="container-fluid">
-            <table class="table table-hover table-bordered">
+            <table class="table table-hover table-bordered" id="tabelSaya">
                 <thead>
                     <tr>
                         {{-- <th>No</th> --}}
@@ -53,7 +53,7 @@
 
                 </tbody>
             </table>
-            {{ $data->links() }}
+            {{-- {{ $data->links() }} --}}
         </div>
         <!-- /.container-fluid -->
     </div>

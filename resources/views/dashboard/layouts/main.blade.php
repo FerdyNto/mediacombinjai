@@ -16,6 +16,9 @@
     <!-- Theme style -->
     <link rel="stylesheet" href="{{ asset('/') }}dist/css/adminlte.min.css">
 
+    {{-- Data Table --}}
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.13.6/css/jquery.dataTables.css" />
+
 
 </head>
 <!--
@@ -66,6 +69,14 @@
     <script src="{{ asset('/') }}js/bootstrap.bundle.min.js"></script>
     <!-- AdminLTE -->
     <script src="{{ asset('/') }}dist/js/adminlte.js"></script>
+
+    {{-- Data Table --}}
+    <script src="https://cdn.datatables.net/1.13.6/js/jquery.dataTables.js"></script>
+    <script>
+        $(document).ready(function() {
+            $('#tabelSaya').DataTable();
+        });
+    </script>
 
 </body>
 
