@@ -41,8 +41,14 @@
                         <tr>
                             {{-- <td>{{ $no++ }}</td> --}}
                             <td>
-                                <img src="{{ asset('img/profil') . '/' . $item->foto }}" alt="{{ $item->nama }}"
-                                    class="img-thumbnail" width="100px">
+                                @if (!$item->foto)
+                                    <img src="{{ asset('img/profil') . '/' . 'foto profil.jpg' }}" alt="{{ $item->nama }}"
+                                        class="img-thumbnail" width="100px">
+                                @else
+                                    <img src="{{ asset('img/profil') . '/' . $item->foto }}" alt="{{ $item->nama }}"
+                                        class="img-thumbnail" width="100px">
+                                @endif
+
                             </td>
                             <td>{{ $item->nama }}</td>
                             <td>{{ $item->username }}</td>
