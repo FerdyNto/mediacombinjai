@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\User;
 use Illuminate\Http\Request;
 
 class ProfilController extends Controller
@@ -16,7 +17,8 @@ class ProfilController extends Controller
     public function strukturOrganisasi()
     {
         return view('profil.struktur_organisasi_mediacom', [
-            'title' => "Struktur Organisasi Media Com Binjai"
+            'title' => "Struktur Organisasi Media Com Binjai",
+            'user' => User::all()
         ]);
     }
 }

@@ -7,86 +7,24 @@
             </div>
 
             <div class="d-flex flex-wrap gap-3 gap-lg-5 justify-content-around justify-content-md-center">
-                <div class="col-10 col-md-12 col-lg-5 bg-white p-1 rounded-4 row align-items-center">
-                    <div class="col-12 col-md-5 mb-3 mb-md-0">
-                        <img src="{{ asset('img/profil/foto profil.jpg') }}" alt=""
-                            class="img-thumbnail rounded-circle">
+                @foreach ($user as $item)
+                    <div class="col-10 col-md-12 col-lg-5 bg-white p-1 rounded-4 row align-items-center">
+                        <div class="col-12 col-md-5 mb-3 mb-md-0">
+                            @if (!$item->foto)
+                                <img src="{{ asset('img/profil') . '/' . 'foto profil.jpg' }}" alt="{{ $item->nama }}"
+                                    class="img-thumbnail rounded-circle">
+                            @else
+                                <img src="{{ asset('img/profil') . '/' . $item->foto }}" alt="{{ $item->nama }}"
+                                    class="img-thumbnail rounded-circle">
+                            @endif
+                        </div>
+                        <div class="col-12 col-md-7 detail-struktur">
+                            <h4 class="fw-semibold">{{ $item->nama }}</h4>
+                            <h5 class="fw-medium">{{ $item->jabatan }}</h5>
+                        </div>
                     </div>
-                    <div class="col-12 col-md-7 detail-struktur">
-                        <h4 class="fw-semibold">Nama Instruktur Instruktur</h4>
-                        <h5 class="fw-medium">Jabatan</h5>
-                    </div>
-                </div>
-                <div class="col-10 col-md-12 col-lg-5 bg-white p-1 rounded-4 row align-items-center">
-                    <div class="col-12 col-md-5 mb-3 mb-md-0">
-                        <img src="{{ asset('img/profil/foto profil.jpg') }}" alt=""
-                            class="img-thumbnail rounded-circle">
-                    </div>
-                    <div class="col-12 col-md-7 detail-struktur">
-                        <h4 class="fw-semibold">Nama Instruktur Instruktur</h4>
-                        <h5 class="fw-medium">Jabatan</h5>
-                    </div>
-                </div>
-                <div class="col-10 col-md-12 col-lg-5 bg-white p-1 rounded-4 row align-items-center">
-                    <div class="col-12 col-md-5 mb-3 mb-md-0">
-                        <img src="{{ asset('img/profil/foto profil.jpg') }}" alt=""
-                            class="img-thumbnail rounded-circle">
-                    </div>
-                    <div class="col-12 col-md-7 detail-struktur">
-                        <h4 class="fw-semibold">Nama Instruktur Instruktur</h4>
-                        <h5 class="fw-medium">Jabatan</h5>
-                    </div>
-                </div>
-                <div class="col-10 col-md-12 col-lg-5 bg-white p-1 rounded-4 row align-items-center">
-                    <div class="col-12 col-md-5 mb-3 mb-md-0">
-                        <img src="{{ asset('img/profil/foto profil.jpg') }}" alt=""
-                            class="img-thumbnail rounded-circle">
-                    </div>
-                    <div class="col-12 col-md-7 detail-struktur">
-                        <h4 class="fw-semibold">Nama Instruktur Instruktur</h4>
-                        <h5 class="fw-medium">Jabatan</h5>
-                    </div>
-                </div>
-                <div class="col-10 col-md-12 col-lg-5 bg-white p-1 rounded-4 row align-items-center">
-                    <div class="col-12 col-md-5 mb-3 mb-md-0">
-                        <img src="{{ asset('img/profil/foto profil.jpg') }}" alt=""
-                            class="img-thumbnail rounded-circle">
-                    </div>
-                    <div class="col-12 col-md-7 detail-struktur">
-                        <h4 class="fw-semibold">Nama Instruktur Instruktur</h4>
-                        <h5 class="fw-medium">Jabatan</h5>
-                    </div>
-                </div>
-                <div class="col-10 col-md-12 col-lg-5 bg-white p-1 rounded-4 row align-items-center">
-                    <div class="col-12 col-md-5 mb-3 mb-md-0">
-                        <img src="{{ asset('img/profil/foto profil.jpg') }}" alt=""
-                            class="img-thumbnail rounded-circle">
-                    </div>
-                    <div class="col-12 col-md-7 detail-struktur">
-                        <h4 class="fw-semibold">Nama Instruktur Instruktur</h4>
-                        <h5 class="fw-medium">Jabatan</h5>
-                    </div>
-                </div>
-                <div class="col-10 col-md-12 col-lg-5 bg-white p-1 rounded-4 row align-items-center">
-                    <div class="col-12 col-md-5 mb-3 mb-md-0">
-                        <img src="{{ asset('img/profil/foto profil.jpg') }}" alt=""
-                            class="img-thumbnail rounded-circle">
-                    </div>
-                    <div class="col-12 col-md-7 detail-struktur">
-                        <h4 class="fw-semibold">Nama Instruktur Instruktur</h4>
-                        <h5 class="fw-medium">Jabatan</h5>
-                    </div>
-                </div>
-                <div class="col-10 col-md-12 col-lg-5 bg-white p-1 rounded-4 row align-items-center">
-                    <div class="col-12 col-md-5 mb-3 mb-md-0">
-                        <img src="{{ asset('img/profil/foto profil.jpg') }}" alt=""
-                            class="img-thumbnail rounded-circle">
-                    </div>
-                    <div class="col-12 col-md-7 detail-struktur">
-                        <h4 class="fw-semibold">Nama Instruktur Instruktur</h4>
-                        <h5 class="fw-medium">Jabatan</h5>
-                    </div>
-                </div>
+                @endforeach
+
             </div>
         </div>
     </section>
