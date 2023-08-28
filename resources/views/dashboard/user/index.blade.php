@@ -8,11 +8,8 @@
                 <div class="col-sm-6">
                     <h1 class="m-0">User</h1>
                 </div><!-- /.col -->
-                <div class="col-sm-6">
-                    <ol class="breadcrumb float-sm-right">
-                        {{-- <li class="breadcrumb-item"><a href="#">Home</a></li> --}}
-                        {{-- <li class="breadcrumb-item active">Dashboard v3</li> --}}
-                    </ol>
+                <div class="col-sm-2 ms-auto">
+                    <a href="{{ route('register') }}" class="btn btn-primary">Tambah Data Instruktur / Admin</a>
                 </div><!-- /.col -->
             </div><!-- /.row -->
         </div><!-- /.container-fluid -->
