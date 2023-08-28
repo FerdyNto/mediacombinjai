@@ -3,8 +3,11 @@
     <div class="container">
         <div class="d-flex align-items-center justify-content-center flex-md-column mx-auto"
             style="height: 100vh; width:500px">
-            <h2 class="mb-3">Register User</h2>
+            <img src="{{ asset('/') . 'img/img logo/LOGO MEDIACOM.png' }}" alt="Logo Media Com" width="250px" class="mb-5">
+
             <form action="" class="col-12 border border-secondary-subtle bg-white p-3" enctype="multipart/form-data">
+                <h2 class="mb-3">Register Admin / Instruktur</h2>
+                @csrf
                 <div class="mb-3">
                     <label for="username" class="form-label">Username</label>
                     <input type="text" id="username" name="username" class="form-control">
@@ -33,8 +36,9 @@
                     <input type="file" id="foto" name="foto" class="form-control">
                 </div>
 
-                <div class="mb-3 d-grid">
+                <div class="mb-3 d-grid gap-2">
                     <button class="btn btn-primary" type="submit">Daftar</button>
+                    <a href="{{ route('dashboard.users') }}" class="btn btn-secondary">kembali</a>
                 </div>
             </form>
         </div>
