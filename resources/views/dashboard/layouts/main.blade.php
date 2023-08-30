@@ -19,6 +19,9 @@
     <link rel="stylesheet" href="https://cdn.datatables.net/1.13.6/css/jquery.dataTables.css" />
     {{-- Bootstrap --}}
     <link rel="stylesheet" href="{{ asset('/') }}css/bootstrap.min.css">
+
+    {{-- TinyMCE --}}
+    <x-head.tinymce-config />
 </head>
 <!--
 `body` tag options:
@@ -56,6 +59,7 @@
 
         <!-- Main Footer -->
         <x-dashboard.footer />
+
     </div>
     <!-- ./wrapper -->
 
