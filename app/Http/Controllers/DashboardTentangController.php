@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Profil_Lembaga;
+use App\Models\VisiMisi;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\File;
 
@@ -81,5 +82,32 @@ class DashboardTentangController extends Controller
 
         Profil_Lembaga::where('id', $id)->update($data);
         return redirect()->route('dashboard.profil')->with('success', 'Berhasil Update Profil Lembaga');
+    }
+
+    public function visiMisi()
+    {
+        return view('dashboard.Tentang.visimisi', [
+            'title' => 'Visi & Misi',
+            'visi_misi' => VisiMisi::first()
+        ]);
+    }
+
+    public function updateVisiMisi(Request $req, $id)
+    {
+        $req->validate([
+            'visi' => 'required',
+            'misi' => 'required'
+        ], [
+            'visi.required' => 'Visi Harus Diisi',
+            'misi.required' => 'Misi Harus Diisi'
+        ]);
+
+        $data = [
+            'visi' => $req->input('visi'),
+            'misi' => $req->input('misi')
+        ];
+
+        VisiMisi::where('id', $id)->update($data);
+        return redirect()->route('dashboard.visiMisi')->with('success', 'Berhasil Update Visi dan Misi');
     }
 }

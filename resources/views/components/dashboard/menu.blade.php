@@ -59,13 +59,6 @@
                         <p> Artikel</p>
                     </a>
                 </li>
-                <li class="nav-item">
-                    <a href="{{ route('dashboard.profil') }}"
-                        class="nav-link {{ request()->is('dashboard/profil-lembaga') ? 'active' : '' }}">
-                        <i class="fa-solid fa-address-card nav-icon"></i>
-                        <p> Profil Lembaga</p>
-                    </a>
-                </li>
 
             </ul>
         </nav>

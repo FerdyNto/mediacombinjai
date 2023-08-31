@@ -56,5 +56,9 @@ Route::middleware(['middleware' => 'auth'])->group(function () {
         // Profil Lembaga
         Route::get('/profil-lembaga', [DashboardTentangController::class, 'profil'])->name('dashboard.profil');
         Route::put('/profil-lembaga/{id}', [DashboardTentangController::class, 'updateProfil'])->name('dashboard.profil.update');
+
+        // Visi Misi
+        Route::get('visi-misi', [DashboardTentangController::class, 'visiMisi'])->name('dashboard.visiMisi');
+        Route::put('visi-misi/{id}', [DashboardTentangController::class, 'updateVisiMisi'])->name('dashboard.visiMisi.update');
     });
 });
