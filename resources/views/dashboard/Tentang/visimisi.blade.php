@@ -23,11 +23,11 @@
                 @method('PUT')
                 <div class="mb-3">
                     <label for="visi">Visi</label>
-                    <textarea name="visi" id="editor-saya" class="form-control">{{ $visi_misi->visi }}</textarea>
+                    <textarea name="visi" id="visi" class="form-control">{{ $visi_misi->visi }}</textarea>
                 </div>
                 <div class="mb-3">
                     <label for="misi">Misi</label>
-                    <textarea name="misi" id="editor-saya" class="form-control">{{ $visi_misi->misi }}</textarea>
+                    <textarea name="misi" id="misi" class="form-control">{{ $visi_misi->misi }}</textarea>
                 </div>
                 <div class="mb-3 d-grid">
                     <button type="submit" class="btn btn-primary">Update Visi & Misi</button>

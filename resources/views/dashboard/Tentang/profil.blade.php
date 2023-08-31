@@ -41,11 +41,11 @@
                 </div>
                 <div class="mb-3">
                     <label for="profil-lembaga" class="form-label">Profil Lembaga</label>
-                    <textarea name="profil_lembaga" id="editor-saya" class="form-control">{{ $data_lembaga->profil_lembaga }}</textarea>
+                    <textarea name="profil_lembaga" id="profil-lembaga" class="form-control">{{ $data_lembaga->profil_lembaga }}</textarea>
                 </div>
                 <div class="mb-3">
                     <label for="sejarah-lembaga" class="form-label">Sejarah Lembaga</label>
-                    <textarea name="sejarah_lembaga" id="editor-saya" class="form-control">{{ $data_lembaga->sejarah_lembaga }}</textarea>
+                    <textarea name="sejarah_lembaga" id="sejarah-lembaga" class="form-control">{{ $data_lembaga->sejarah_lembaga }}</textarea>
                 </div>
                 @if (!$data_lembaga->foto_pimpinan)
                     <h3>Belum ada Foto Pimpinan</h3>
