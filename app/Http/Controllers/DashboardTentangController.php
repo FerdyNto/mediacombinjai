@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Akreditasi;
 use App\Models\Profil_Lembaga;
 use App\Models\VisiMisi;
 use Illuminate\Http\Request;
@@ -109,5 +110,105 @@ class DashboardTentangController extends Controller
 
         VisiMisi::where('id', $id)->update($data);
         return redirect()->route('dashboard.visiMisi')->with('success', 'Berhasil Update Visi dan Misi');
+    }
+
+    public function akreditasi()
+    {
+        return view('dashboard.Tentang.akreditasi.akreditas', [
+            'title' => 'Akreditasi',
+            'akreditasi' => Akreditasi::all()
+        ]);
+    }
+
+    public function createAkreditasi()
+    {
+        return view('dashboard.Tentang.akreditasi.create', [
+            'title' => 'Form Akreditasi Baru'
+        ]);
+    }
+
+    public function storeAkreditasi(Request $req)
+    {
+        $req->validate([
+            'nama_akreditasi' => 'required',
+            'logo_akreditasi' => 'required|mimes:jpg,jpeg,png'
+        ], [
+            'nama_akreditasi.required' => 'Nama Akreditasi Harus Diisi',
+            'logo_akreditasi.required' => 'Logo Akreditasi Harus Diisi',
+            'logo_akreditasi.mimes' => 'Logo Akreditasi Harus Berkestensi : jpg, jpeg, png'
+        ]);
+
+        // Upload Logo Akreditasi
+        $gambar_file = $req->file('logo_akreditasi');
+        $gambar_ekstensi = $gambar_file->extension();
+        $gambar_nama = 'Akre' . date('ymdhis') . '.' . $gambar_ekstensi;
+        $gambar_file->move(public_path('img/akreditasi/'), $gambar_nama);
+
+        $data = [
+            'nama_akreditasi' => $req->input('nama_akreditasi'),
+            'logo_akreditasi' => $gambar_nama
+        ];
+
+        Akreditasi::create($data);
+        return redirect()->route('dashboard.akreditasi')->with('success', 'Berhasil Menambahkan Akreditasi Baru');
+    }
+
+    public function editAkreditasi($id)
+    {
+        return view('dashboard.Tentang.akreditasi.edit', [
+            'title' => 'Form Edit Akreditasi',
+            'akreditasi' => Akreditasi::where('id', $id)->first()
+        ]);
+    }
+
+    public function updateAkreditasi(Request $req, $id)
+    {
+        $req->validate([
+            'nama_akreditasi' => 'required'
+        ], [
+            'nama_akreditasi.required' => 'Nama Akreditasi Harus Diisi'
+        ]);
+
+        $data = [
+            'nama_akreditasi' => $req->input('nama_akreditasi')
+        ];
+
+        // Ubah Gambar
+        if ($req->hasFile('logo_akreditasi')) {
+            $req->validate([
+                'logo_akreditasi' => 'mimes:jgp,png,jpeg'
+            ], [
+                'logo_akreditasi.mimes' => 'Gambar Harus Berekstensi : jpg, jpeg, png'
+            ]);
+
+            // Upload Logo Akreditasi
+            $gambar_file = $req->file('logo_akreditasi');
+            $gambar_ekstensi = $gambar_file->extension();
+            $gambar_nama = 'Akre' . date('ymdhis') . '.' . $gambar_ekstensi;
+            $gambar_file->move(public_path('img/akreditasi/'), $gambar_nama);
+
+            // Hapus Gambar Lama
+            $data_gambar = Akreditasi::where('id', $id)->first();
+            File::delete(public_path('img/akreditasi') . '/' . $data_gambar->logo_akreditasi);
+
+            // Upload Gambar Baru
+            $data = [
+                'logo_akreditasi' => $gambar_nama
+            ];
+        }
+
+        Akreditasi::where('id', $id)->update($data);
+        return redirect()->route('dashboard.akreditasi')->with('success', 'Berhasil Ubah Akreditasi');
+    }
+
+    public function destroyAkreditasi($id)
+    {
+        // Hapus Logo Akreditasi
+        $akreditasi = Akreditasi::where('id', $id)->first();
+        File::delete(public_path('img/akreditasi') . '/' . $akreditasi->logo_akreditasi);
+
+        // Hapus data
+        Akreditasi::where('id', $id)->delete();
+        return redirect()->route('dashboard.akreditasi')->with('success', 'Berhasil Hapus Data Akreditasi');
     }
 }

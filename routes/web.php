@@ -60,5 +60,13 @@ Route::middleware(['middleware' => 'auth'])->group(function () {
         // Visi Misi
         Route::get('visi-misi', [DashboardTentangController::class, 'visiMisi'])->name('dashboard.visiMisi');
         Route::put('visi-misi/{id}', [DashboardTentangController::class, 'updateVisiMisi'])->name('dashboard.visiMisi.update');
+
+        // Akreditasi
+        Route::get('akreditasi', [DashboardTentangController::class, 'akreditasi'])->name('dashboard.akreditasi');
+        Route::get('create-akreditasi', [DashboardTentangController::class, 'createAkreditasi'])->name('dashboard.akreditasi.create');
+        Route::post('store-akreditasi', [DashboardTentangController::class, 'storeAkreditasi'])->name('dashboard.akreditasi.store');
+        Route::get('akreditasi/{id}/edit', [DashboardTentangController::class, 'editAkreditasi'])->name('dashboard.akreditasi.edit');
+        Route::put('akreditasi/{id}', [DashboardTentangController::class, 'updateAkreditasi'])->name('dashboard.akreditasi.update');
+        Route::delete('akreditasi/{id}', [DashboardTentangController::class, 'destroyAkreditasi'])->name('dashboard.akreditasi.destroy');
     });
 });

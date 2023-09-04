@@ -15,6 +15,10 @@
             <a href="{{ route('dashboard.visiMisi') }}"
                 class="nav-link {{ request()->is('dashboard/visi-misi') ? 'active' : '' }}">Visi & Misi</a>
         </li>
+        <li class="nav-item d-none d-sm-inline-block">
+            <a href="{{ route('dashboard.akreditasi') }}"
+                class="nav-link {{ request()->is('dashboard/akreditasi') || request()->is('dashboard/create-akreditasi') ? 'active' : '' }}">Akreditasi</a>
+        </li>
     </ul>
 
     <form action="{{ route('logout') }}" method="POST" class="d-inline ms-auto">
