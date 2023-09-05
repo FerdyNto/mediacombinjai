@@ -7,6 +7,8 @@ use App\Models\Profil_Lembaga;
 use App\Models\VisiMisi;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\File;
+use RealRashid\SweetAlert\Facades\Alert;
+
 
 class DashboardTentangController extends Controller
 {
@@ -82,7 +84,8 @@ class DashboardTentangController extends Controller
         }
 
         Profil_Lembaga::where('id', $id)->update($data);
-        return redirect()->route('dashboard.profil')->with('success', 'Berhasil Update Profil Lembaga');
+        Alert::toast('Berhasil Update Profil Lembaga', 'success');
+        return redirect()->route('dashboard.profil');
     }
 
     public function visiMisi()
@@ -109,11 +112,15 @@ class DashboardTentangController extends Controller
         ];
 
         VisiMisi::where('id', $id)->update($data);
-        return redirect()->route('dashboard.visiMisi')->with('success', 'Berhasil Update Visi dan Misi');
+        Alert::toast('Berhasil Update Visi dan Misi', 'success');
+        return redirect()->route('dashboard.visiMisi');
     }
 
     public function akreditasi()
     {
+        $title = 'Hapus Akreditasi!';
+        $text = "Yakin ingin hapus akredtiasi ini?";
+        confirmDelete($title, $text);
         return view('dashboard.Tentang.akreditasi.akreditas', [
             'title' => 'Akreditasi',
             'akreditasi' => Akreditasi::all()
@@ -150,7 +157,8 @@ class DashboardTentangController extends Controller
         ];
 
         Akreditasi::create($data);
-        return redirect()->route('dashboard.akreditasi')->with('success', 'Berhasil Menambahkan Akreditasi Baru');
+        Alert::toast('Berhasil Menambahkan Akreditasi Baru', 'success');
+        return redirect()->route('dashboard.akreditasi');
     }
 
     public function editAkreditasi($id)
@@ -198,7 +206,8 @@ class DashboardTentangController extends Controller
         }
 
         Akreditasi::where('id', $id)->update($data);
-        return redirect()->route('dashboard.akreditasi')->with('success', 'Berhasil Ubah Akreditasi');
+        Alert::toast('Berhasil Ubah Akreditasi', 'success');
+        return redirect()->route('dashboard.akreditasi');
     }
 
     public function destroyAkreditasi($id)
@@ -209,6 +218,7 @@ class DashboardTentangController extends Controller
 
         // Hapus data
         Akreditasi::where('id', $id)->delete();
-        return redirect()->route('dashboard.akreditasi')->with('success', 'Berhasil Hapus Data Akreditasi');
+        Alert::toast('Berhasil Hapus Data Akreditasi', 'success');
+        return redirect()->route('dashboard.akreditasi');
     }
 }

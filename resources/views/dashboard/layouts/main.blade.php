@@ -22,6 +22,10 @@
 
     {{-- TinyMCE --}}
     <x-head.tinymce-config />
+
+
+
+
 </head>
 <!--
 `body` tag options:
@@ -46,7 +50,7 @@
 
         <!-- Content Wrapper. Contains page content -->
         <div class="content-wrapper">
-            @include('components.pesan')
+            {{-- @include('components.pesan') --}}
             @yield('content')
         </div>
         <!-- /.content-wrapper -->
@@ -81,6 +85,9 @@
             $('#tabelSaya').DataTable();
         });
     </script>
+
+    {{-- Sweet Alert --}}
+    @include('sweetalert::alert')
 
 </body>
 

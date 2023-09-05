@@ -37,13 +37,8 @@
                             <td>
                                 <a href="{{ route('dashboard.akreditasi.edit', ['id' => $item->id]) }}"
                                     class="btn btn-warning">Edit</a>
-                                <form action="{{ route('dashboard.akreditasi.destroy', ['id' => $item->id]) }}"
-                                    method="POST" onsubmit="return confirm('Apakah Ingin Menghapus Akreditasi??')"
-                                    class="d-inline">
-                                    @csrf
-                                    @method('DELETE')
-                                    <button type="submit" class="btn btn-danger">Hapus</button>
-                                </form>
+                                <a href="{{ route('dashboard.akreditasi.destroy', ['id' => $item->id]) }}"
+                                    data-confirm-delete="true" class="btn btn-danger">Hapus</a>
                             </td>
                         </tr>
                     @endforeach
