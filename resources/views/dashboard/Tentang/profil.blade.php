@@ -27,11 +27,7 @@
                 @else
                     <div class="row">
                         <img src="{{ asset('/img/img asset') . '/' . $data_lembaga->gambar_lembaga }}" alt=""
-                            class="col-4">
-                        <div class="col-1 display-3 text-primary">
-                            <i class="fa-solid fa-arrow-right-long"></i>
-                        </div>
-                        <img src="" alt="" class="col-4" id="img-lembaga">
+                            class="col-4" id="img-lembaga">
                     </div>
                 @endif
                 <div class="mb-3">
@@ -52,11 +48,7 @@
                 @else
                     <div class="row">
                         <img src="{{ asset('/img/img asset') . '/' . $data_lembaga->foto_pimpinan }}" alt=""
-                            class="col-3">
-                        <div class="col-1 display-3 text-primary">
-                            <i class="fa-solid fa-arrow-right-long"></i>
-                        </div>
-                        <img src="" alt="" class="col-3" id="img-pimpinan">
+                            class="col-3" id="img-pimpinan">
                     </div>
                 @endif
                 <div class="mb-3">
