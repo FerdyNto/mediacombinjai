@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use RealRashid\SweetAlert\Facades\Alert;
 
 class AuthController extends Controller
 {
@@ -26,7 +27,8 @@ class AuthController extends Controller
 
         // Otentikasi
         if (Auth::attempt($login)) {
-            return redirect()->route('dashboard')->with('success', 'Selamat Datang ' . Auth::user()->nama);
+            Alert::toast('Selamat Datang ' . Auth::user()->nama, 'success');
+            return redirect()->route('dashboard');
         } else {
             return redirect()->route('login')->withErrors('Username dan Password Tidak Valid');
         }

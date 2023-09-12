@@ -21,15 +21,21 @@
 </head>
 
 <body>
-    @include('components.pesan')
+    {{-- @include('components.pesan') --}}
     @yield('auth')
 
-
+    <!-- jQuery -->
+    {{-- <script src="{{ asset('/') }}plugins/jquery/jquery.min.js"></script> --}}
+    <script src="https://code.jquery.com/jquery-3.7.0.slim.js"
+        integrity="sha256-7GO+jepT9gJe9LB4XFf8snVOjX3iYNb0FHYr5LI1N5c=" crossorigin="anonymous"></script>
     {{-- Bootstrap --}}
     <script src="{{ asset('js/bootstrap.bundle.min.js') }}"></script>
 
     {{-- Fontawesome --}}
     <script src="{{ asset('js/fontawesome.all.min.js') }}"></script>
+
+    {{-- Sweet Alert --}}
+    @include('sweetalert::alert')
 </body>
 
 </html>

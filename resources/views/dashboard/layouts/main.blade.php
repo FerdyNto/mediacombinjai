@@ -19,6 +19,13 @@
     <link rel="stylesheet" href="https://cdn.datatables.net/1.13.6/css/jquery.dataTables.css" />
     {{-- Bootstrap --}}
     <link rel="stylesheet" href="{{ asset('/') }}css/bootstrap.min.css">
+
+    {{-- TinyMCE --}}
+    <x-head.tinymce-config />
+
+
+
+
 </head>
 <!--
 `body` tag options:
@@ -43,7 +50,7 @@
 
         <!-- Content Wrapper. Contains page content -->
         <div class="content-wrapper">
-            @include('components.pesan')
+            {{-- @include('components.pesan') --}}
             @yield('content')
         </div>
         <!-- /.content-wrapper -->
@@ -56,6 +63,7 @@
 
         <!-- Main Footer -->
         <x-dashboard.footer />
+
     </div>
     <!-- ./wrapper -->
 
@@ -77,6 +85,9 @@
             $('#tabelSaya').DataTable();
         });
     </script>
+
+    {{-- Sweet Alert --}}
+    @include('sweetalert::alert')
 
 </body>
 
