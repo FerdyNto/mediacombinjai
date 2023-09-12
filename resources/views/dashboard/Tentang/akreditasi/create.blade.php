@@ -5,7 +5,7 @@
         <div class="container-fluid">
             <div class="row mb-2">
                 <div class="col-sm-1">
-                    <a href="{{ route('dashboard.akreditasi') }}" class="btn btn-secondary">Kembali</a>
+                    <a href="{{ route('dashboard.akreditasi.index') }}" class="btn btn-secondary">Kembali</a>
                 </div><!-- /.col -->
                 <div class="col-sm-6">
                     <h1 class="m-0">Form Akreditasi Baru</h1>

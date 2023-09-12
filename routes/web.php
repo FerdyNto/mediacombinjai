@@ -62,11 +62,13 @@ Route::middleware(['middleware' => 'auth'])->group(function () {
         Route::put('visi-misi/{id}', [DashboardTentangController::class, 'updateVisiMisi'])->name('dashboard.visiMisi.update');
 
         // Akreditasi
-        Route::get('akreditasi', [DashboardTentangController::class, 'akreditasi'])->name('dashboard.akreditasi');
-        Route::get('create-akreditasi', [DashboardTentangController::class, 'createAkreditasi'])->name('dashboard.akreditasi.create');
-        Route::post('store-akreditasi', [DashboardTentangController::class, 'storeAkreditasi'])->name('dashboard.akreditasi.store');
-        Route::get('akreditasi/{id}/edit', [DashboardTentangController::class, 'editAkreditasi'])->name('dashboard.akreditasi.edit');
-        Route::put('akreditasi/{id}', [DashboardTentangController::class, 'updateAkreditasi'])->name('dashboard.akreditasi.update');
-        Route::delete('akreditasi/{id}', [DashboardTentangController::class, 'destroyAkreditasi'])->name('dashboard.akreditasi.destroy');
+        Route::prefix('akreditasi')->group(function () {
+            Route::get('/', [DashboardTentangController::class, 'akreditasi'])->name('dashboard.akreditasi.index');
+            Route::get('create', [DashboardTentangController::class, 'createAkreditasi'])->name('dashboard.akreditasi.create');
+            Route::post('store', [DashboardTentangController::class, 'storeAkreditasi'])->name('dashboard.akreditasi.store');
+            Route::get('{id}/edit', [DashboardTentangController::class, 'editAkreditasi'])->name('dashboard.akreditasi.edit');
+            Route::put('{id}/update', [DashboardTentangController::class, 'updateAkreditasi'])->name('dashboard.akreditasi.update');
+            Route::delete('{id}/destroy', [DashboardTentangController::class, 'destroyAkreditasi'])->name('dashboard.akreditasi.destroy');
+        });
     });
 });

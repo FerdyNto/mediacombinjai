@@ -117,4 +117,17 @@
         </div>
     </section>
     {{-- Akhir Paket Pelatihan --}}
+
+    {{-- Google Riview --}}
+    <section id="riview" class="py-3 py-lg-5">
+        <div class="container-fluid">
+            <div class="text-center header-pelatihan mb-5">
+                <h2 class="fw-semibold">Google Riview</h2>
+                {{-- <p class="fw-semibold">Ulasan </p> --}}
+            </div>
+            <script src="https://static.elfsight.com/platform/platform.js" data-use-service-core defer></script>
+            <div class="elfsight-app-f0ceb160-bf34-4c4d-a8d3-1050025e76a6"></div>
+        </div>
+    </section>
+    {{-- akhir Google Riview --}}
 @endsection
