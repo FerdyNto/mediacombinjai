@@ -131,7 +131,7 @@ return [
     */
 
     'animation' => [
-        'enable' => env('SWEET_ALERT_ANIMATION_ENABLE', false),
+        'enable' => env('SWEET_ALERT_ANIMATION_ENABLE', true),
     ],
 
     'animatecss' => env('SWEET_ALERT_ANIMATECSS', 'https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css'),
@@ -189,7 +189,7 @@ return [
     |
     */
 
-    'toast_position' => env('SWEET_ALERT_TOAST_POSITION', 'top-end'),
+    'toast_position' => env('SWEET_ALERT_TOAST_POSITION', 'bottom-end'),
 
     /*
     |--------------------------------------------------------------------------
@@ -214,7 +214,7 @@ return [
 
         'autoClose' => env('SWEET_ALERT_MIDDLEWARE_AUTO_CLOSE', false),
 
-        'toast_position' => env('SWEET_ALERT_MIDDLEWARE_TOAST_POSITION', 'top-end'),
+        'toast_position' => env('SWEET_ALERT_MIDDLEWARE_TOAST_POSITION', 'bottom-end'),
 
         'toast_close_button' => env('SWEET_ALERT_MIDDLEWARE_TOAST_CLOSE_BUTTON', true),
 

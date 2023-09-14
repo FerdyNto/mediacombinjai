@@ -50,7 +50,16 @@ Route::middleware(['middleware' => 'auth'])->group(function () {
         Route::get('/', [DashboardMediaCom::class, 'index'])->name('dashboard');
 
         Route::get('/artikel', [DashboardArtikelController::class, 'index'])->name('dashboard.artikel');
-        Route::get('/jabatan', [DashboardJabatanController::class, 'index'])->name('dashboard.jabatan');
+
+        // Jabatan
+        Route::prefix('jabatan')->group(function () {
+            Route::get('/', [DashboardJabatanController::class, 'index'])->name('dashboard.jabatan.index');
+            Route::get('/create', [DashboardJabatanController::class, 'create'])->name('dashboard.jabatan.create');
+            Route::post('/store', [DashboardJabatanController::class, 'store'])->name('dashboard.jabatan.store');
+            Route::get('/{id}/edit', [DashboardJabatanController::class, 'edit'])->name('dashboard.jabatan.edit');
+            Route::put('/{id}/update', [DashboardJabatanController::class, 'update'])->name('dashboard.jabatan.update');
+            Route::delete('/{id}/destroy', [DashboardJabatanController::class, 'destroy'])->name('dashboard.jabatan.destroy');
+        });
         Route::get('/user', [DashboardUserController::class, 'index'])->name('dashboard.users');
 
         // Profil Lembaga

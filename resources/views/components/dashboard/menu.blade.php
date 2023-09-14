@@ -48,7 +48,8 @@
                 </li>
 
                 <li class="nav-item">
-                    <a href="{{ route('dashboard.jabatan') }}" class="nav-link">
+                    <a href="{{ route('dashboard.jabatan.index') }}"
+                        class="nav-link {{ request()->routeIs('dashboard.jabatan.*') ? 'active' : '' }}">
                         <i class="fa-solid fa-user-plus nav-icon"></i>
                         <p> Jabatan</p>
                     </a>

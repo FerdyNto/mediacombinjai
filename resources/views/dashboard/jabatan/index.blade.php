@@ -8,11 +8,8 @@
                 <div class="col-sm-6">
                     <h1 class="m-0">Jabatan</h1>
                 </div><!-- /.col -->
-                <div class="col-sm-6">
-                    <ol class="breadcrumb float-sm-right">
-                        {{-- <li class="breadcrumb-item"><a href="#">Home</a></li> --}}
-                        {{-- <li class="breadcrumb-item active">Dashboard v3</li> --}}
-                    </ol>
+                <div class="col-sm-2 ms-auto">
+                    <a href="{{ route('dashboard.jabatan.create') }}" class="btn btn-primary">Tambah Jabatan</a>
                 </div><!-- /.col -->
             </div><!-- /.row -->
         </div><!-- /.container-fluid -->
@@ -22,23 +19,29 @@
     <!-- Main content -->
     <div class="content">
         <div class="container-fluid">
-          <table class="table table-hover table-bordered">
-            <tr>
-              <th>ID</th>
-              <th>Nama Jabatan</th>
-              <th>Tipe Jabatan</th>
-            </tr>
-            <tr>
-              <td>1</td>
-              <td>Instruktur Pemrograman</td>
-              <td>Instruktur</td>
-            </tr>
-            <tr>
-              <td>2</td>
-              <td>Instruktur Hardware</td>
-              <td>Instruktur</td>
-            </tr>
-          </table> 
+            <table class="table table-hover table-bordered" id="tabelSaya">
+                <thead>
+                    <tr>
+                        <th>Nama Jabatan</th>
+                        <th>Tipe Jabatan</th>
+                        <th>Aksi</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach ($jabatan as $item)
+                        <tr>
+                            <td>{{ $item->nama_jabatan }}</td>
+                            <td>{{ $item->tipe_jabatan }}</td>
+                            <td>
+                                <a href="{{ route('dashboard.jabatan.edit', ['id' => $item->id]) }}"
+                                    class="btn btn-warning">Edit</a>
+                                <a href="{{ route('dashboard.jabatan.destroy', ['id' => $item->id]) }}"
+                                    class="btn btn-danger" data-confirm-delete="true">Hapus</a>
+                            </td>
+                        </tr>
+                    @endforeach
+                </tbody>
+            </table>
         </div>
         <!-- /.container-fluid -->
     </div>
