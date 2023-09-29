@@ -44,6 +44,7 @@ Route::middleware(['middleware' => 'guest'])->group(function () {
 Route::middleware(['middleware' => 'auth'])->group(function () {
     // Registrasi
     Route::get('/register', [AuthController::class, 'register'])->name('register');
+    Route::post('/usr-register', [AuthController::class, 'createUsr'])->name('register.create');
     Route::post('logout', [AuthController::class, 'logout'])->name('logout');
 
     Route::prefix('dashboard')->group(function () {
@@ -60,7 +61,11 @@ Route::middleware(['middleware' => 'auth'])->group(function () {
             Route::put('/{id}/update', [DashboardJabatanController::class, 'update'])->name('dashboard.jabatan.update');
             Route::delete('/{id}/destroy', [DashboardJabatanController::class, 'destroy'])->name('dashboard.jabatan.destroy');
         });
-        Route::get('/user', [DashboardUserController::class, 'index'])->name('dashboard.users');
+
+        // User
+        Route::get('/user', [DashboardUserController::class, 'index'])->name('dashboard.users.index');
+        Route::get('/user-config/{id}', [AuthController::class, 'userConfig'])->name('dashboard.user.config');
+        Route::post('/user-config/{id}/update', [AuthController::class, 'userConfigUpdate'])->name('dashboard.user.update');
 
         // Profil Lembaga
         Route::get('/profil-lembaga', [DashboardTentangController::class, 'profil'])->name('dashboard.profil');

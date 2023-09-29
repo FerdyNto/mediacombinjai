@@ -21,8 +21,9 @@
 
             </div>
             <div class="info">
-                <p class="text-white d-block">{{ Auth::user()->nama }}</p>
+                <p class="text-white d-block m-0">{{ Auth::user()->nama }}</p>
             </div>
+
         </div>
 
 
@@ -40,7 +41,7 @@
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a href="{{ route('dashboard.users') }}"
+                    <a href="{{ route('dashboard.users.index') }}"
                         class="nav-link {{ request()->is('dashboard/user') ? 'active' : '' }}">
                         <i class="fa-solid fa-users nav-icon"></i>
                         <p> Users</p>

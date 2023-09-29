@@ -21,7 +21,19 @@
         </li>
     </ul>
 
-    <form action="{{ route('logout') }}" method="POST" class="d-inline ms-auto">
+    <div class="dropdown ms-auto me-3">
+        <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown"
+            aria-expanded="false">
+            Setting <span><i class="fa-solid fa-gear"></i></span>
+        </button>
+        <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="{{ route('dashboard.user.config', ['id' => Auth::user()->id]) }}">Ubah
+                    Profil</a>
+            </li>
+            <li><a class="dropdown-item" href="#">Ubah Password</a></li>
+        </ul>
+    </div>
+    <form action="{{ route('logout') }}" method="POST" class="d-inline me-3">
         @csrf
         <button class="btn btn-danger" type="submit">Keluar</button>
     </form>
