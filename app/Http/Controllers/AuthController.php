@@ -154,6 +154,37 @@ class AuthController extends Controller
 
         User::where('id', $id)->update($user);
         Alert::toast('Berhasil Ubah Profil', 'success');
-        return redirect()->route('dashboard.users.index');
+        return redirect()->route('dashboard');
+    }
+
+    public function userChgPasswd()
+    {
+        return view('auth.user-chgPasswd', [
+            'title' => 'Ubah Password'
+        ]);
+    }
+
+    public function userUpdtPasswd(Request $req)
+    {
+        $req->validate([
+            'password_lama' => 'required|current_password',
+            'password_baru' => 'required|min:8|max:16',
+            'c_password' => 'same:password_baru'
+        ], [
+            'password_lama.required' => 'Harap masukkan password lama anda!',
+            'password_lama.current_password' => 'Password lama anda tidak sesuai',
+            'password_baru.required' => 'Harap masukkan password yang baru',
+            'password_baru.min' => 'Password minimal memiliki 8 karakter',
+            'password_baru.max' => 'Password maximal memiliki 16 karakter',
+            'c_password.same' => 'Konfirmasi password tidak sesuai dengan password baru'
+        ]);
+
+        $user = User::find(Auth::id());
+        $user->password = bcrypt($req->input('password_baru'));
+        $user->save();
+        $req->session()->regenerate();
+
+        Alert::toast('Berhasil Ubah Password ' . Auth::user()->username, 'success');
+        return redirect()->route('dashboard');
     }
 }

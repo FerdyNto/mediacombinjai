@@ -30,7 +30,7 @@
             <li><a class="dropdown-item" href="{{ route('dashboard.user.config', ['id' => Auth::user()->id]) }}">Ubah
                     Profil</a>
             </li>
-            <li><a class="dropdown-item" href="#">Ubah Password</a></li>
+            <li><a class="dropdown-item" href="{{ route('dashboard.user.edit.password') }}">Ubah Password</a></li>
         </ul>
     </div>
     <form action="{{ route('logout') }}" method="POST" class="d-inline me-3">

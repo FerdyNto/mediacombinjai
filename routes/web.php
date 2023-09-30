@@ -65,7 +65,9 @@ Route::middleware(['middleware' => 'auth'])->group(function () {
         // User
         Route::get('/user', [DashboardUserController::class, 'index'])->name('dashboard.users.index');
         Route::get('/user-config/{id}', [AuthController::class, 'userConfig'])->name('dashboard.user.config');
-        Route::post('/user-config/{id}/update', [AuthController::class, 'userConfigUpdate'])->name('dashboard.user.update');
+        Route::put('/user-config/{id}/update', [AuthController::class, 'userConfigUpdate'])->name('dashboard.user.update');
+        Route::get('/user-chg-password', [AuthController::class, 'userChgPasswd'])->name('dashboard.user.edit.password');
+        Route::put('/user-upt-password', [AuthController::class, 'userUpdtPasswd'])->name('dashboard.user.update.password');
 
         // Profil Lembaga
         Route::get('/profil-lembaga', [DashboardTentangController::class, 'profil'])->name('dashboard.profil');

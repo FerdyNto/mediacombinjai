@@ -5,12 +5,11 @@
             style="height: 100vh; width:500px">
             {{-- <img src="{{ asset('/') . 'img/img logo/LOGO MEDIACOM.png' }}" alt="Logo Media Com" width="250px" class="mb-5"> --}}
 
-            {{-- @dd($user) --}}
-            {{-- @dd($user->userJabatan->id) --}}
             <form action="{{ route('dashboard.user.update', ['id' => $user->id]) }}"
                 class="col-12 border border-secondary-subtle bg-white p-3" enctype="multipart/form-data" method="POST">
                 <h2 class="mb-3">Akun Setting</h2>
                 @csrf
+                @method('PUT')
                 <div class="mb-3">
                     <label for="username" class="form-label">Username</label>
                     <input type="text" id="username" name="username" class="form-control" value="{{ $user->username }}">
@@ -53,8 +52,8 @@
                 <input type="hidden" name="status" value="aktif">
 
                 <div class="mb-3 d-grid gap-2">
-                    <button class="btn btn-primary" type="submit">Ubah</button>
-                    <a href="{{ route('dashboard.users.index') }}" class="btn btn-secondary">kembali</a>
+                    <button class="btn btn-primary" type="submit">Ubah Profil</button>
+                    <a href="{{ route('dashboard') }}" class="btn btn-secondary">kembali</a>
                 </div>
             </form>
         </div>
