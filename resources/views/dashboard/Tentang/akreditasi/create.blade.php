@@ -22,7 +22,8 @@
                 @csrf
                 <div class="mb-3">
                     <label for="nama-akreditasi" class="form-label">Nama Akreditasi</label>
-                    <input type="text" id="nama-akreditasi" name="nama_akreditasi" class="form-control">
+                    <input type="text" id="nama-akreditasi" name="nama_akreditasi" class="form-control"
+                        value="{{ old('nama_akreditasi') }}">
                 </div>
 
                 <img src="" alt="" id="img" class="col-3">

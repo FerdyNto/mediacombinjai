@@ -25,9 +25,6 @@
             </div>
 
         </div>
-
-
-
         <!-- Sidebar Menu -->
         <nav class="mt-2">
             <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu"
@@ -35,26 +32,31 @@
                 <!-- Add icons to the links using the .nav-icon class
        with font-awesome or any other icon font library -->
                 <li class="nav-item">
-                    <a href="{{ route('dashboard') }}" class="nav-link">
+                    <a href="{{ route('dashboard') }}"
+                        class="nav-link {{ request()->routeIs('dashboard') ? 'active' : '' }}">
                         <i class="fa-solid fa-gauge-high nav-icon"></i>
                         <p> Dashboard</p>
                     </a>
                 </li>
-                <li class="nav-item">
-                    <a href="{{ route('dashboard.users.index') }}"
-                        class="nav-link {{ request()->is('dashboard/user') ? 'active' : '' }}">
-                        <i class="fa-solid fa-users nav-icon"></i>
-                        <p> Users</p>
-                    </a>
-                </li>
 
-                <li class="nav-item">
-                    <a href="{{ route('dashboard.jabatan.index') }}"
-                        class="nav-link {{ request()->routeIs('dashboard.jabatan.*') ? 'active' : '' }}">
-                        <i class="fa-solid fa-user-plus nav-icon"></i>
-                        <p> Jabatan</p>
-                    </a>
-                </li>
+                @if (Auth::user()->userJabatan->tipe_jabatan === 'Admin')
+                    <li class="nav-item">
+                        <a href="{{ route('dashboard.users.index') }}"
+                            class="nav-link {{ request()->routeIs('dashboard.users.*') ? 'active' : '' }}">
+                            <i class="fa-solid fa-users nav-icon"></i>
+                            <p> Users</p>
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a href="{{ route('dashboard.jabatan.index') }}"
+                            class="nav-link {{ request()->routeIs('dashboard.jabatan.*') ? 'active' : '' }}">
+                            <i class="fa-solid fa-user-plus nav-icon"></i>
+                            <p> Jabatan</p>
+                        </a>
+                    </li>
+                @endif
+
                 <li class="nav-item">
                     <a href="{{ route('dashboard.artikel') }}" class="nav-link">
                         <i class="fa-solid fa-newspaper nav-icon"></i>

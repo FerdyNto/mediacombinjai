@@ -4,11 +4,11 @@
     <!-- Content Header (Page header) -->
     <div class="content-header">
         <div class="container-fluid">
-            <div class="row mb-2">
-                <div class="col-sm-6">
+            <div class="mb-2 d-flex justify-content-between">
+                <div>
                     <h1 class="m-0">Jabatan</h1>
                 </div><!-- /.col -->
-                <div class="col-sm-2 ms-auto">
+                <div>
                     <a href="{{ route('dashboard.jabatan.create') }}" class="btn btn-primary">Tambah Jabatan</a>
                 </div><!-- /.col -->
             </div><!-- /.row -->
