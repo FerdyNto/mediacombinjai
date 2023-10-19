@@ -58,7 +58,8 @@
                 @endif
 
                 <li class="nav-item">
-                    <a href="{{ route('dashboard.artikel') }}" class="nav-link">
+                    <a href="{{ route('dashboard.artikel.index') }}"
+                        class="nav-link {{ request()->routeIS('dashboard.artikel.*') ? 'active' : '' }}">
                         <i class="fa-solid fa-newspaper nav-icon"></i>
                         <p> Artikel</p>
                     </a>

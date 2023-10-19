@@ -50,7 +50,14 @@ Route::middleware(['middleware' => 'auth'])->group(function () {
     Route::prefix('dashboard')->group(function () {
         Route::get('/', [DashboardMediaCom::class, 'index'])->name('dashboard');
 
-        Route::get('/artikel', [DashboardArtikelController::class, 'index'])->name('dashboard.artikel');
+        // Artikel
+        Route::prefix('artikel')->group(function () {
+            Route::get('/', [DashboardArtikelController::class, 'index'])->name('dashboard.artikel.index');
+            Route::get('/create', [DashboardArtikelController::class, 'create'])->name('dashboard.artikel.create');
+            Route::post('/store', [DashboardArtikelController::class, 'store'])->name('dashboard.artikel.store');
+            Route::get('{id}/edit', [DashboardArtikelController::class, 'edit'])->name('dashboard.artikel.edit');
+            Route::put('{id}/update', [DashboardArtikelController::class, 'update'])->name('dashboard.artikel.update');
+        });
 
         // Jabatan
         Route::prefix('jabatan')->group(function () {

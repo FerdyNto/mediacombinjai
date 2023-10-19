@@ -35,7 +35,6 @@
                 <div class="mb-3">
                     <button type="submit" class="btn btn-primary">Tambah</button>
                 </div>
-
             </form>
         </div>
     </div>

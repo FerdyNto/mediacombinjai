@@ -29,6 +29,8 @@
                     <label for="misi">Misi</label>
                     <textarea name="misi" id="misi" class="form-control">{{ $visi_misi->misi }}</textarea>
                 </div>
+
+
                 <div class="mb-3 d-grid">
                     <button type="submit" class="btn btn-primary">Update Visi & Misi</button>
                 </div>

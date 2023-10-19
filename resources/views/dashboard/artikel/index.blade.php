@@ -6,13 +6,10 @@
         <div class="container-fluid">
             <div class="row mb-2">
                 <div class="col-sm-6">
-                    <h1 class="m-0">Artikel </h1>
+                    <h1 class="m-0">Artikel</h1>
                 </div><!-- /.col -->
-                <div class="col-sm-6">
-                    <ol class="breadcrumb float-sm-right">
-                        {{-- <li class="breadcrumb-item"><a href="#">Home</a></li> --}}
-                        {{-- <li class="breadcrumb-item active">Dashboard v3</li> --}}
-                    </ol>
+                <div class="col-sm-2 ms-auto">
+                    <a href="{{ route('dashboard.artikel.create') }}" class="btn btn-primary">Tambah Artikel Baru</a>
                 </div><!-- /.col -->
             </div><!-- /.row -->
         </div><!-- /.container-fluid -->
@@ -22,35 +19,45 @@
     <!-- Main content -->
     <div class="content">
         <div class="container-fluid">
-          <table class="table table-hover table-bordered border-primary">
-            <tr>
-              <th>No</th>
-              <th>Judul</th>
-              <th>Slug</th>
-              <th>Body</th>
-              <th>Gambar</th>
-              <th>Create_at</th>
-              <th>ID User</th>
-            </tr>
-            <tr>
-              <td>1</td>
-              <td>akreditas</td>
-              <td>bisa</td>
-              <td>merah</td>
-              <td>*_*</td>
-              <td>submit</td>
-              <td>19763272</td>
-            </tr>
-            <tr>
-              <td>2</td>
-              <td>akreditas</td>
-              <td>bisa</td>
-              <td>merah</td>
-              <td><img src="BOB.jpeg" alt="ir"></td>
-              <td>submit</td>
-              <td>19763354</td>
-            </tr>
-          </table>
+            <table class="table table-hover table-bordered" id="tabelSaya">
+                <thead>
+                    <tr>
+                        <th>No</th>
+                        <th>Judul Artikel</th>
+                        <th class="col-2">Gambar</th>
+                        <th>Body Artikel</th>
+                        <th>Tanggal Post</th>
+                        <th>Penulis</th>
+                        <th>Aksi</th>
+                    </tr>
+                </thead>
+                <tbody>
+
+                    @foreach ($artikels as $artikel)
+                        <tr>
+                            <td>{{ $artikel->id }}</td>
+                            <td>{{ $artikel->judul }}</td>
+                            <td>
+                                @if (!$artikel->gambar)
+                                    <p>Tidak ada Gambar</p>
+                                @else
+                                    <img src="{{ asset('img/artikels') . '/' . $artikel->gambar }}"
+                                        alt="{{ $artikel->judul }}" width="100%">
+                                @endif
+                            </td>
+                            <td>{!! $artikel->body !!}</td>
+
+                            <td>{{ $artikel->created_at }}</td>
+                            <td>{{ $artikel->user_id }}</td>
+                            <td>
+                                <a href="{{ route('dashboard.artikel.edit', ['id' => $artikel->id]) }}"
+                                    class="btn btn-warning">Edit</a>
+                            </td>
+                        </tr>
+                    @endforeach
+
+                </tbody>
+            </table>
         </div>
         <!-- /.container-fluid -->
     </div>
