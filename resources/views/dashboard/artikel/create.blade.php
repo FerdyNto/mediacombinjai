@@ -43,7 +43,9 @@
                 </div>
 
                 <div class="mb-3">
-                    <label for="gambar" class="form-label">Gambar</label>
+                    <label for="gambar" class="form-label">Gambar</label><br>
+                    <img src="{{ asset('img/artikels') . '/' . $artikel->gambar }}" alt="" id="img"
+                        class="col-3 mb-3">
                     <input type="file" id="gambar" name="gambar" class="form-control">
                     @error('gambar')
                         <span class="text-danger">{{ $message }}</span>
@@ -81,4 +83,13 @@
                 .replace(/[^\w\-]+/g, '');
         }
     </script> --}}
+
+    <script>
+        const img = document.querySelector('#img');
+        const input_img = document.querySelector('#gambar');
+
+        input_img.addEventListener('change', () => {
+            img.src = URL.createObjectURL(input_img.files[0]);
+        });
+    </script>
 @endsection

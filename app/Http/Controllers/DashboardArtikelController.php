@@ -2,7 +2,6 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Akreditasi;
 use App\Models\Artikel;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
@@ -11,7 +10,6 @@ use RealRashid\SweetAlert\Facades\Alert;
 
 class DashboardArtikelController extends Controller
 {
-
    public function index()
    {
       return view('dashboard.artikel.index', [
@@ -43,10 +41,15 @@ class DashboardArtikelController extends Controller
       ]);
 
       // Upload Gambar Artikel
-      $gambar_file = $req->file('gambar');
-      $gambar_ekstensi = $gambar_file->extension();
-      $gambar_nama = 'Artikel' . date('ymdhis') . '.' . $gambar_ekstensi;
-      $gambar_file->move(public_path('img/artikels/'), $gambar_nama);
+      if (!$req->gambar) {
+         $gambar_nama = '';
+      } else {
+         $gambar_file = $req->file('gambar');
+         $gambar_ekstensi = $gambar_file->extension();
+         $gambar_nama = 'Artikel' . date('ymdhis') . '.' . $gambar_ekstensi;
+         $gambar_file->move(public_path('img/artikels/'), $gambar_nama);
+      }
+
 
       if (Auth::check()) {
          $artikel = [
@@ -86,11 +89,6 @@ class DashboardArtikelController extends Controller
          'body.required' => 'Isi Artikel harus ada!'
       ]);
 
-      $artikel = [
-         'judul' => $req->input('judul_artikel'),
-         'body' => $req->input('body'),
-         'user_id' => Auth::user()->id
-      ];
 
       if ($req->hasFile('gambar')) {
          $req->validate([
@@ -111,10 +109,20 @@ class DashboardArtikelController extends Controller
 
          // Upload File Gambar Baru
          $artikel = [
-            'gambar' => $gambar_nama
+            'gambar' => $gambar_nama,
+            'judul' => $req->input('judul_artikel'),
+            'body' => $req->input('body'),
+            'user_id' => Auth::user()->id
+         ];
+      } else {
+         $artikel = [
+            'judul' => $req->input('judul_artikel'),
+            'body' => $req->input('body'),
+            'user_id' => Auth::user()->id,
          ];
       }
 
+      // dd($artikel);
       Artikel::where('id', $id)->update($artikel);
       Alert::toast('Berhasil Update Artikel Lembaga', 'success');
       return redirect()->route('dashboard.artikel.index');
